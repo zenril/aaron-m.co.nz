@@ -1,0 +1,147 @@
+html, body {
+    background:$background;
+    height:100%;
+    padding:0;
+    margin:0;
+
+    h1,h2,h3,h4,h5,h6,a,div,p,li,ul,span {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    
+    #app, .app-main {
+        height:100%;
+
+        .left-panel {
+
+            float:left;
+            width:$panelsplit;
+            height:100%;
+            background:$background;
+            
+            overflow:hidden;
+            border-right:1px solid $border;
+
+
+            .branching {    
+                height:100%;
+                padding:0 40px;
+
+                svg {
+                    height:250%; 
+                    position: relative;
+                    top: 50%;
+                    transform: perspective(1px) translateY(-50%); 
+                    min-height: 2000px;
+                    
+
+                    .circle{
+                        animation-duration: .4s;
+                        transform-origin: center center;
+                        -webkit-animation-fill-mode: forwards;
+                        transform: scale(0.1);
+                        
+                        &:hover{ 
+                            
+                        }
+                    }
+
+                    &.finished {
+                        .circle{
+                            animation-name: buttonTransition;
+                        }
+                    }
+
+                    
+                }
+            }
+        }
+        .main-window{
+            float:left;
+            height:100%;
+            position: absolute;
+            left:$panelsplit;
+            top:0;
+            right:0;
+
+        
+            .cards{
+                height:100%;
+                overflow-y: auto;
+            }
+
+            .card1{
+                border-right:1px solid $lightborder;     
+            }
+
+            .card{
+                &.hide{
+                    display: none;
+                }
+
+                &.show{
+                    display: block;
+                }
+
+                
+
+                float:left;
+                padding:20px 40px;
+                height:100%;
+                    
+                font-family: 'Roboto', sans-serif;
+                font-family: 'Roboto Condensed', sans-serif;
+                
+                h1, h2 {
+                    font-weight: 300;
+                    white-space: nowrap;
+                }
+
+                ul, li {
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 500;
+                    list-style: none;
+                    font-size: 14px;
+                }
+
+                &>ul{
+                    padding:0;
+                }
+
+                ul > li {
+                    padding-top:10px;
+                    padding-bottom:4px;
+                }
+
+                li {
+                    border-bottom: 1px solid #ccc;
+                }
+                
+                li:last-child {
+                    border: none;
+                }
+                
+                li > strong {
+                    text-decoration: none;
+                    color: #000;
+                    display: block;                  
+                    
+                    -webkit-transition: font-size 0.3s ease;
+                    -moz-transition: font-size 0.3s ease;
+                    -o-transition: font-size 0.3s ease;
+                    -ms-transition: font-size 0.3s ease;
+                    transition: font-size 0.3s ease;
+                }
+                
+                li:hover > strong {
+                    font-size: 20px;
+                }
+
+
+
+            }
+        }
+    }
+}

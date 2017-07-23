@@ -1,0 +1,112 @@
+@keyframes buttonTransition {
+  from {
+    transform: scale(0.1); }
+  to {
+    transform: scale(1); } }
+
+html, body {
+  background: #ffffff;
+  height: 100%;
+  padding: 0;
+  margin: 0; }
+  html h1, html h2, html h3, html h4, html h5, html h6, html a, html div, html p, html li, html ul, html span, body h1, body h2, body h3, body h4, body h5, body h6, body a, body div, body p, body li, body ul, body span {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  html #app, html .app-main, body #app, body .app-main {
+    height: 100%; }
+    html #app .left-panel, html .app-main .left-panel, body #app .left-panel, body .app-main .left-panel {
+      float: left;
+      width: 140px;
+      height: 100%;
+      background: #ffffff;
+      overflow: hidden;
+      border-right: 1px solid #d4d4d4; }
+      html #app .left-panel .branching, html .app-main .left-panel .branching, body #app .left-panel .branching, body .app-main .left-panel .branching {
+        height: 100%;
+        padding: 0 40px; }
+        html #app .left-panel .branching svg, html .app-main .left-panel .branching svg, body #app .left-panel .branching svg, body .app-main .left-panel .branching svg {
+          height: 250%;
+          position: relative;
+          top: 50%;
+          transform: perspective(1px) translateY(-50%);
+          min-height: 2000px; }
+          html #app .left-panel .branching svg .circle, html .app-main .left-panel .branching svg .circle, body #app .left-panel .branching svg .circle, body .app-main .left-panel .branching svg .circle {
+            animation-duration: .4s;
+            transform-origin: center center;
+            -webkit-animation-fill-mode: forwards;
+            transform: scale(0.1); }
+          html #app .left-panel .branching svg.finished .circle, html .app-main .left-panel .branching svg.finished .circle, body #app .left-panel .branching svg.finished .circle, body .app-main .left-panel .branching svg.finished .circle {
+            animation-name: buttonTransition; }
+    html #app .main-window, html .app-main .main-window, body #app .main-window, body .app-main .main-window {
+      float: left;
+      height: 100%;
+      position: absolute;
+      left: 140px;
+      top: 0;
+      right: 0; }
+      html #app .main-window .cards, html .app-main .main-window .cards, body #app .main-window .cards, body .app-main .main-window .cards {
+        height: 100%;
+        overflow-y: auto; }
+      html #app .main-window .card1, html .app-main .main-window .card1, body #app .main-window .card1, body .app-main .main-window .card1 {
+        border-right: 1px solid #eaeaea; }
+      html #app .main-window .card, html .app-main .main-window .card, body #app .main-window .card, body .app-main .main-window .card {
+        float: left;
+        padding: 20px 40px;
+        height: 100%;
+        font-family: 'Roboto', sans-serif;
+        font-family: 'Roboto Condensed', sans-serif; }
+        html #app .main-window .card.hide, html .app-main .main-window .card.hide, body #app .main-window .card.hide, body .app-main .main-window .card.hide {
+          display: none; }
+        html #app .main-window .card.show, html .app-main .main-window .card.show, body #app .main-window .card.show, body .app-main .main-window .card.show {
+          display: block; }
+        html #app .main-window .card h1, html #app .main-window .card h2, html .app-main .main-window .card h1, html .app-main .main-window .card h2, body #app .main-window .card h1, body #app .main-window .card h2, body .app-main .main-window .card h1, body .app-main .main-window .card h2 {
+          font-weight: 300;
+          white-space: nowrap; }
+        html #app .main-window .card ul, html #app .main-window .card li, html .app-main .main-window .card ul, html .app-main .main-window .card li, body #app .main-window .card ul, body #app .main-window .card li, body .app-main .main-window .card ul, body .app-main .main-window .card li {
+          font-family: 'Roboto', sans-serif;
+          font-weight: 500;
+          list-style: none;
+          font-size: 14px; }
+        html #app .main-window .card > ul, html .app-main .main-window .card > ul, body #app .main-window .card > ul, body .app-main .main-window .card > ul {
+          padding: 0; }
+        html #app .main-window .card ul > li, html .app-main .main-window .card ul > li, body #app .main-window .card ul > li, body .app-main .main-window .card ul > li {
+          padding-top: 10px;
+          padding-bottom: 4px; }
+        html #app .main-window .card li, html .app-main .main-window .card li, body #app .main-window .card li, body .app-main .main-window .card li {
+          border-bottom: 1px solid #ccc; }
+        html #app .main-window .card li:last-child, html .app-main .main-window .card li:last-child, body #app .main-window .card li:last-child, body .app-main .main-window .card li:last-child {
+          border: none; }
+        html #app .main-window .card li > strong, html .app-main .main-window .card li > strong, body #app .main-window .card li > strong, body .app-main .main-window .card li > strong {
+          text-decoration: none;
+          color: #000;
+          display: block;
+          -webkit-transition: font-size 0.3s ease;
+          -moz-transition: font-size 0.3s ease;
+          -o-transition: font-size 0.3s ease;
+          -ms-transition: font-size 0.3s ease;
+          transition: font-size 0.3s ease; }
+        html #app .main-window .card li:hover > strong, html .app-main .main-window .card li:hover > strong, body #app .main-window .card li:hover > strong, body .app-main .main-window .card li:hover > strong {
+          font-size: 20px; }
+
+@media (max-width: 768px) {
+  html #app .left-panel, html .app-main .left-panel, body #app .left-panel, body .app-main .left-panel {
+    width: 100px; }
+    html #app .left-panel .branching, html .app-main .left-panel .branching, body #app .left-panel .branching, body .app-main .left-panel .branching {
+      height: 100%;
+      padding: 0 28px; }
+  html #app .main-window, html .app-main .main-window, body #app .main-window, body .app-main .main-window {
+    left: 100px; }
+    html #app .main-window .card1, html .app-main .main-window .card1, body #app .main-window .card1, body .app-main .main-window .card1 {
+      border: 0; }
+    html #app .main-window .card, html .app-main .main-window .card, body #app .main-window .card, body .app-main .main-window .card {
+      float: none;
+      height: auto; }
+      html #app .main-window .card.show, html .app-main .main-window .card.show, body #app .main-window .card.show, body .app-main .main-window .card.show {
+        display: none; }
+      html #app .main-window .card.hide, html .app-main .main-window .card.hide, body #app .main-window .card.hide, body .app-main .main-window .card.hide {
+        display: block; }
+      html #app .main-window .card h1, html #app .main-window .card h2, html .app-main .main-window .card h1, html .app-main .main-window .card h2, body #app .main-window .card h1, body #app .main-window .card h2, body .app-main .main-window .card h1, body .app-main .main-window .card h2 {
+        font-weight: 300;
+        white-space: normal; } }

@@ -1,0 +1,41 @@
+
+@media (max-width: 768px) {
+    html, body {
+        #app, .app-main {
+            .left-panel {
+                width:$smallPanelsplit;
+
+                .branching {
+                    height: 100%;
+                    padding: 0 28px;
+                }
+            } 
+        
+            .main-window{
+                left:$smallPanelsplit;
+                .card1{
+                    border:0;    
+                }
+
+                .card{
+                    float:none;
+                    height: auto;
+
+                    &.show{
+                        display: none;
+                    }
+
+                    &.hide{
+                        display: block;
+                    }
+
+
+                    h1, h2 {
+                        font-weight: 300;
+                        white-space: normal;
+                    }
+                }
+            }
+        }
+    }
+} 
