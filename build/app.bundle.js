@@ -33932,7 +33932,16 @@ exports.default = React.createClass({
             React.createElement(
                 'div',
                 { className: 'desc' },
-                this.props.obj.desc
+                React.createElement(
+                    'a',
+                    { href: this.props.obj.link },
+                    this.props.obj.link
+                ),
+                React.createElement(
+                    'p',
+                    null,
+                    this.props.obj.desc
+                )
             )
         );
     }

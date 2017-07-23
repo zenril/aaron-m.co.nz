@@ -14,13 +14,13 @@ export default React.createClass({
             <div className={classes}>
                 <div className="img-container">
                     <img src={this.props.obj.src} />
-                    
                 </div>
                 <div className="desc">
-                        {this.props.obj.desc}
+                    <a href={this.props.obj.link}>{this.props.obj.link}</a>
+                    <p>{this.props.obj.desc}</p>
                 </div>
             </div>
-
+ 
         ); 
     }
 });
