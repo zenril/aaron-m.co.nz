@@ -28048,7 +28048,7 @@ var Navigation = function Navigation() {
         React.createElement(
             _reactRouterDom.Link,
             { to: '/' },
-            'Home'
+            'Me'
         ),
         React.createElement(
             _reactRouterDom.Link,
