@@ -46,6 +46,33 @@ html, body {
       left: 140px;
       top: 0;
       right: 0; }
+      html #app .main-window .example-img, html .app-main .main-window .example-img, body #app .main-window .example-img, body .app-main .main-window .example-img {
+        float: left;
+        width: 40%;
+        margin: 10px;
+        padding-bottom: 26.25%;
+        background: #efefef;
+        position: relative; }
+        html #app .main-window .example-img .desc, html .app-main .main-window .example-img .desc, body #app .main-window .example-img .desc, body .app-main .main-window .example-img .desc {
+          position: absolute;
+          z-index: 22;
+          bottom: 10px;
+          left: 10px;
+          background: #efefef;
+          padding: 10px;
+          font-size: 12px;
+          font-weight: 500; }
+        html #app .main-window .example-img .img-container, html .app-main .main-window .example-img .img-container, body #app .main-window .example-img .img-container, body .app-main .main-window .example-img .img-container {
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          right: 10px;
+          bottom: 10px;
+          overflow-y: scroll; }
+          html #app .main-window .example-img .img-container img, html .app-main .main-window .example-img .img-container img, body #app .main-window .example-img .img-container img, body .app-main .main-window .example-img .img-container img {
+            width: 100%;
+            height: auto;
+            position: relative; }
       html #app .main-window .cards, html .app-main .main-window .cards, body #app .main-window .cards, body .app-main .main-window .cards {
         height: 100%;
         overflow-y: auto; }
@@ -82,13 +109,12 @@ html, body {
           text-decoration: none;
           color: #000;
           display: block;
-          -webkit-transition: font-size 0.3s ease;
-          -moz-transition: font-size 0.3s ease;
-          -o-transition: font-size 0.3s ease;
-          -ms-transition: font-size 0.3s ease;
-          transition: font-size 0.3s ease; }
-        html #app .main-window .card li:hover > strong, html .app-main .main-window .card li:hover > strong, body #app .main-window .card li:hover > strong, body .app-main .main-window .card li:hover > strong {
-          font-size: 20px; }
+          font-size: 15px; }
+
+.navigation {
+  padding: 20px 30px; }
+  .navigation a {
+    padding: 5px 10px; }
 
 @media (max-width: 768px) {
   html #app .left-panel, html .app-main .left-panel, body #app .left-panel, body .app-main .left-panel {
@@ -98,6 +124,9 @@ html, body {
       padding: 0 28px; }
   html #app .main-window, html .app-main .main-window, body #app .main-window, body .app-main .main-window {
     left: 100px; }
+    html #app .main-window .example-img, html .app-main .main-window .example-img, body #app .main-window .example-img, body .app-main .main-window .example-img {
+      width: 80%;
+      padding-bottom: 46.25%; }
     html #app .main-window .card1, html .app-main .main-window .card1, body #app .main-window .card1, body .app-main .main-window .card1 {
       border: 0; }
     html #app .main-window .card, html .app-main .main-window .card, body #app .main-window .card, body .app-main .main-window .card {

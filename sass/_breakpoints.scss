@@ -13,10 +13,16 @@
         
             .main-window{
                 left:$smallPanelsplit;
-                .card1{
+
+                .example-img {
+                    width:80%;
+                    padding-bottom: 46.25%;
+                }
+                
+                .card1{ 
                     border:0;    
                 }
-
+ 
                 .card{
                     float:none;
                     height: auto;
