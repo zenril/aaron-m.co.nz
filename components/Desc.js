@@ -12,11 +12,10 @@ export default React.createClass({
         return (
 
             <div className={classes}>
-                <h1>{this.props.name}</h1>
-                <a href={this.props.link}>{this.props.link}</a>
-                
-                    {this.props.desc}
-               
+                <h1>{this.props.obj.name}</h1>
+                <h3>Built with: {this.props.obj.built}</h3>
+                <a href={this.props.obj.link}>{this.props.obj.link}</a>
+                 {this.props.obj.desc}
             </div>
 
         );

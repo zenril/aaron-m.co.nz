@@ -12,7 +12,7 @@ export default React.createClass({
                 <div className="card card1">
                     <ul>
                         <li>
-                            <strong>Enviroments</strong>
+                            <strong>Environments</strong>
                             <ul>
                                 <li>EC2</li>
                                 <li>S3</li>

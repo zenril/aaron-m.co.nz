@@ -1061,10 +1061,11 @@ html, body {
         height: auto; }
       html #app .main-window .gallery .no-thingo, html .app-main .main-window .gallery .no-thingo, body #app .main-window .gallery .no-thingo, body .app-main .main-window .gallery .no-thingo {
         margin: 0;
-        padding: 2px; }
+        padding: 4px; }
         html #app .main-window .gallery .no-thingo.vertical:first-child, html .app-main .main-window .gallery .no-thingo.vertical:first-child, body #app .main-window .gallery .no-thingo.vertical:first-child, body .app-main .main-window .gallery .no-thingo.vertical:first-child {
           padding-top: 0; }
       html #app .main-window .example-img, html .app-main .main-window .example-img, body #app .main-window .example-img, body .app-main .main-window .example-img {
+        max-width: 1200px;
         border-bottom: 20px solid #efefef;
         padding-bottom: 200px;
         margin-top: 40px; }

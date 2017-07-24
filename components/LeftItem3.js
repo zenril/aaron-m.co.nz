@@ -30,7 +30,7 @@ export default React.createClass({
                 </div> 
 
                 <div className='col-sm-4'>
-                    <Desc name={this.props.obj.name} link={this.props.obj.link} desc={this.props.obj.desc} />
+                    <Desc obj={this.props.obj} />
                 </div>
 
                 <div className="clearfix"></div>

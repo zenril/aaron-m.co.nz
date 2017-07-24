@@ -13,24 +13,20 @@ export default React.createClass({
 
             <div className={classes}>
                 
-                <div className='col-sm-4'>
-                      <Desc obj={this.props.obj}  />
-                </div> 
-
                 <div className='col-sm-8 gallery'>
                     <div className='col-sm-4 no-thingo'>
                         <img src={this.props.obj.src[0]} />
                     </div>
-                    <div className='col-sm-8 no-thingo'>
-                        <div className='no-thingo vertical'>
-                            <img src={this.props.obj.src[1]} />
-                            <div className="clearfix"></div>
-                        </div>
-                        <div className='no-thingo vertical'>
-                            <img src={this.props.obj.src[2]} />
-                            <div className="clearfix"></div>
-                        </div>
+                   <div className='col-sm-4 no-thingo'>
+                        <img src={this.props.obj.src[1]} />
                     </div>
+                    <div className='col-sm-4 no-thingo'>
+                        <img src={this.props.obj.src[2]} />
+                    </div>
+                </div>
+
+                <div className='col-sm-4'>
+                      <Desc obj={this.props.obj} />
                 </div>
 
                 <div className="clearfix"></div>

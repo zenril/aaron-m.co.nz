@@ -74,7 +74,7 @@ html, body {
 
                 .no-thingo{
                     margin:0;
-                    padding:2px;
+                    padding:4px;
 
                     &.vertical:first-child{
                         padding-top:0;
@@ -82,7 +82,7 @@ html, body {
                 }
             }
             .example-img{
-                
+                max-width: 1200px;
                 border-bottom: 20px solid $examplebackground;
                 padding-bottom:200px;
                 margin-top:40px;

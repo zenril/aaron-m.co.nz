@@ -1,6 +1,10 @@
 var React = require('react');
 import LeftItem3 from '../LeftItem3.js';
 import RightItem3 from '../RightItem3.js';
+import RightItemSlit from '../RightItemSlit.js';
+import LeftItemSlit from '../LeftItemSlit.js';
+import SingleLeft from '../SingleLeft.js';
+import SingleRight from '../SingleRight.js';
 
 export default React.createClass({
     render: function () {
@@ -76,14 +80,36 @@ export default React.createClass({
                 src: ["/img/samples/dio/1.png", "/img/samples/dio/2.png", "/img/samples/dio/3.png"],
                 link: "http://prospectus.waikatodiocesan.school.nz",
                 built: "SilverStripe",
-                desc: (<div>I Built the Waikato Diocesan prospectus site while making design tweaks to keep elements consistant and fresh.</div>),
+                desc: (<div>I built the Waikato Diocesan prospectus site while making design tweaks to keep elements consistant and fresh.</div>),
                 mode: 1
         },{     
                 name: "Sea Dragon",
                 src: ["/img/samples/seadragon/1.png", "/img/samples/seadragon/2.png", "/img/samples/seadragon/3.png"],
                 link: "http://www.seadragon.co.nz",
                 built :"Wordpress",
-                desc: (<div>I developed this site while working with the a designer to get a quick turn around.</div>),
+                desc: (<div>I developed this site while working with a designer to get a quick turn around.</div>),
+                mode: 2
+        },
+        {     
+                name: "Harmonised",
+                src: ["/img/samples/harmonised/1.png", "/img/samples/harmonised/2.png", "/img/samples/harmonised/3.png"],
+                link: "https://www.harmonised.co.nz/",
+                built :"Silverstripe",
+                desc: (<div>The harmonised website is single page site with a heavely modified admin interface. </div>),
+                mode: 3
+        },{     
+                name: "Cloud Farmer",
+                src: ["/img/samples/agrecord/1.png"],
+                link: "http://cloudfarmer.co.nz/",
+                built :"Symfony",
+                desc: (<div>I built an API that syncs with native phone applications, and maintained AngularJS on the front end.</div>),
+                mode: 4
+        },{     
+                name: "SavvyKiwi",
+                src: ["/img/samples/savvy/1.png", "/img/samples/savvy/2.png", "/img/samples/savvy/3.png"],
+                link: "https://www.savvykiwi.co.nz",
+                built :"Laravel",
+                desc: (<div>I built a custom CMS for the front sales pages. The Back end was built connecting to the same API's that the SavvyKiwi phone apps connected to.</div>),
                 mode: 2
         }];
         
@@ -120,6 +146,12 @@ export default React.createClass({
                         }
                         if(object.mode == 2){    
                                 return <RightItem3 obj={object} key={i} />;
+                        }
+                        if(object.mode == 3){    
+                                return <LeftItemSlit obj={object} key={i} />;
+                        }
+                        if(object.mode == 4){    
+                                return <SingleRight obj={object} key={i} />;
                         }
                     })}
               

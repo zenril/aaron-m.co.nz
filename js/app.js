@@ -16,11 +16,10 @@ import Navigation from '../components/Navigation.js';
 
 var App = React.createClass({
     render: function () {
-        return (
+        return ( 
             <div className='app-main'>
-
                 <div className="left-panel"> 
-                    <div className="branching">
+                    <div className="branching a">
                         <Branching />
                     </div>
                 </div>
