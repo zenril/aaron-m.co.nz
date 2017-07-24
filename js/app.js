@@ -16,9 +16,10 @@ import Navigation from '../components/Navigation.js';
 
 var App = React.createClass({
     render: function () {
-        return ( 
+        return (
             <div className='app-main'>
-                <div className="left-panel">
+
+                <div className="left-panel"> 
                     <div className="branching">
                         <Branching />
                     </div>
@@ -32,7 +33,7 @@ var App = React.createClass({
                             <Route exact path="/examples" component={Examples}/>
                         </div>
                     </div> 
-                </Router>                                           
+                </Router>                                
             </div>
         );
     }

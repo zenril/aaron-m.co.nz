@@ -1,5 +1,6 @@
 var React = require('react');
-import ExampleItem from '../ExampleItem.js';
+import LeftItem3 from '../LeftItem3.js';
+import RightItem3 from '../RightItem3.js';
 
 export default React.createClass({
     render: function () {
@@ -67,6 +68,25 @@ export default React.createClass({
                 link: "cloudfarmer.co.nz",
                 desc: "Built with Symfony. I built the Phone API and maintained AngularJS front end."
         }];
+
+
+        var IMAGES_TEST =
+        [{      
+                name: "Waikato Diocesan Prospectus",
+                src: ["/img/samples/dio/1.png", "/img/samples/dio/2.png", "/img/samples/dio/3.png"],
+                link: "http://prospectus.waikatodiocesan.school.nz",
+                built: "SilverStripe",
+                desc: (<div>I Built the Waikato Diocesan prospectus site while making design tweaks to keep elements consistant and fresh.</div>),
+                mode: 1
+        },{     
+                name: "Sea Dragon",
+                src: ["/img/samples/seadragon/1.png", "/img/samples/seadragon/2.png", "/img/samples/seadragon/3.png"],
+                link: "http://www.seadragon.co.nz",
+                built :"Wordpress",
+                desc: (<div>I developed this site while working with the a designer to get a quick turn around.</div>),
+                mode: 2
+        }];
+        
         
 
         function shuffle(array) {
@@ -74,7 +94,7 @@ export default React.createClass({
 
             // While there remain elements to shuffle...
             while (0 !== currentIndex) {
-
+ 
                 // Pick a remaining element...
                 randomIndex = Math.floor(Math.random() * currentIndex);
                 currentIndex -= 1;
@@ -92,10 +112,15 @@ export default React.createClass({
 
         return (
 
-            <div className="container">
+            <div className="example-container">
                
-                    {IMAGES.map(function(object, i){
-                        return <ExampleItem obj={object} key={i} />;
+                    {IMAGES_TEST.map(function(object, i){
+                        if(object.mode == 1){    
+                                return <LeftItem3 obj={object} key={i} />;
+                        }
+                        if(object.mode == 2){    
+                                return <RightItem3 obj={object} key={i} />;
+                        }
                     })}
               
             </div>
@@ -105,3 +130,4 @@ export default React.createClass({
 });
 
 
+ 
