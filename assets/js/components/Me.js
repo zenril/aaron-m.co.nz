@@ -21,9 +21,6 @@ export default React.createClass({
                     Wellington, New Zealand
                     <br/>
                     aaron@aaron-m.co.nz
-                    <div>
-                        <a target="_blank" href='/assets/docs/aaron-meredith-cv.pdf'>View my CV</a>
-                    </div>
                     <div className="jobs">
                         <h2>
                             Work History

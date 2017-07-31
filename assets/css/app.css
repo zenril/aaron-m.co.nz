@@ -1031,6 +1031,11 @@ html, body {
       text-decoration: none;
       font-size: 18px;
       font-weight: 500; }
+    html #app .cv a, html .app-main .cv a, body #app .cv a, body .app-main .cv a {
+      display: block;
+      padding: 20px 30px;
+      border: 1px solid black;
+      border-radius: 4px; }
     html #app .left-panel, html .app-main .left-panel, body #app .left-panel, body .app-main .left-panel {
       float: left;
       width: 140px;
@@ -1140,9 +1145,14 @@ html, body {
             margin-left: -6px; }
 
 .navigation {
-  padding: 20px 30px; }
+  padding: 0px 30px; }
   .navigation a {
-    padding: 5px 10px; }
+    padding: 0 20px;
+    line-height: 50px;
+    height: 50px;
+    display: inline-block; }
+    .navigation a:hover {
+      background: rgba(0, 0, 0, 0.2); }
 
 @media (max-width: 768px) {
   .line {

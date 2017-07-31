@@ -23,6 +23,15 @@ html, body {
             }
         }
 
+        .cv{
+            a {
+                display: block;
+                padding:20px 30px;
+                border:1px solid black;
+                border-radius: 4px;
+            }
+        }
+
         .left-panel {
 
             float:left;

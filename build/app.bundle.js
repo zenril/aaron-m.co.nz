@@ -32236,15 +32236,6 @@ exports.default = React.createClass({
                 'aaron@aaron-m.co.nz',
                 React.createElement(
                     'div',
-                    null,
-                    React.createElement(
-                        'a',
-                        { target: '_blank', href: '/assets/docs/aaron-meredith-cv.pdf' },
-                        'View my CV'
-                    )
-                ),
-                React.createElement(
-                    'div',
                     { className: 'jobs' },
                     React.createElement(
                         'h2',
@@ -34595,12 +34586,17 @@ var Navigation = function Navigation() {
             { to: '/' },
             'Me'
         ),
-        ' |',
         React.createElement(
             _reactRouterDom.Link,
             { to: '/examples' },
             'Examples'
-        )
+        ),
+        React.createElement(
+            'a',
+            { className: 'pull-right', target: '_blank', href: '/assets/docs/aaron-meredith-cv.pdf' },
+            'View my CV'
+        ),
+        React.createElement('div', { className: 'clearfix' })
     );
 };
 
