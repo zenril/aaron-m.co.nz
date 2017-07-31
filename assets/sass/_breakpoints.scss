@@ -1,16 +1,27 @@
 
 @media (max-width: 768px) {
+    .line{
+        display:none;
+    }
+}
+
+@media (max-width: 830px) {
     html, body {
+
+       
+
         #app, .app-main {
             .left-panel {
                 width:$smallPanelsplit;
-
+ 
                 .branching {
                     height: 100%;
                     padding: 0 28px;
                 }
             } 
-        
+            
+            
+
             .main-window{
                 left:$smallPanelsplit;
 
@@ -26,6 +37,10 @@
                 .card{
                     float:none;
                     height: auto;
+
+                     &.isamea {
+                        width:100%;
+                    }
 
                     &.show-state{
                         display: none;

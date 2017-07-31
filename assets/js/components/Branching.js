@@ -20,11 +20,22 @@ export default React.createClass({
   },
     render: function () {
         return (
+           
             <svg 
               id='branches'
               viewBox='0 0 38.782765 1392.148'
               {...this.props}
             >
+             <style>
+              {"\
+              .color3,.navigation{\
+                background-color:"+ this.state.color3 + ";\
+              }\
+              .color3t, h2{\
+                color:"+ this.state.color3 + ";\
+              }\
+              "} 
+            </style>
               <path
                 fill='none'
                 stroke={this.state.color3}

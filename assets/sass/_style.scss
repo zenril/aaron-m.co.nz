@@ -14,6 +14,15 @@ html, body {
     #app, .app-main {
         height:100%;
 
+         .navigation {
+            a,a:visited,a:active,a:hover,a:focus {
+                color:white;
+                text-decoration: none;
+                font-size: 18px;
+                font-weight: 500;
+            }
+        }
+
         .left-panel {
 
             float:left;
@@ -109,6 +118,9 @@ html, body {
             }
 
             .card{
+                &.isamea {
+                    width:60%;
+                }
 
                 &.hide-state{
                     display: none;
@@ -116,7 +128,7 @@ html, body {
 
                 &.show-state{
                     display: block;
-                }
+                } 
 
                 float:left;
                 padding:20px 40px;
@@ -165,9 +177,47 @@ html, body {
                     // -ms-transition: font-size 0.3s ease;
                     // transition: font-size 0.3s ease;
                 }
+                .jobs{
+                    margin-top:40px;
+
+                    .job-position{
+                        display: -webkit-box;
+                        display: -webkit-flex;
+                        display: -ms-flexbox;
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        .fex{
+                            display: flex;
+                            flex-direction: column;
+                        }
+
+                        .name, .description{
+                            padding-bottom:50px;
+                            p {
+                                margin:5px 0;
+                            }
+                        }
+                    }
+                }
                 
-                li:hover > strong {
+                .line{
                     
+                    .line-bar{
+                        height: 100%;
+                        width: 2px;
+                        margin-left: 50%;
+                        //background: black;
+                        
+                        .line-ball{
+                            border-radius: 10px;
+                            width:14px;
+                            height: 14px;
+                            margin-top: 5px;
+                            //background: black;
+                            margin-left:-6px;
+                        }
+                    }
                 }
             }
         }

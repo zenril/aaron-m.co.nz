@@ -44,6 +44,14 @@ export default React.createClass({
                             </ul>
                         </li>
 
+                        <li>
+                            <strong>Graphics</strong>
+                            <ul>
+                                <li>Photoshop / Gimp</li>
+                                <li>Inkscape / Illustrator</li>
+                            </ul>
+                        </li>
+
                         <li>HTML</li>
                         <li>CSS, Sass, Less</li>
                         <li>jQuery</li> 

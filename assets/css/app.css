@@ -1026,6 +1026,11 @@ html, body {
     -moz-osx-font-smoothing: grayscale; }
   html #app, html .app-main, body #app, body .app-main {
     height: 100%; }
+    html #app .navigation a, html #app .navigation a:visited, html #app .navigation a:active, html #app .navigation a:hover, html #app .navigation a:focus, html .app-main .navigation a, html .app-main .navigation a:visited, html .app-main .navigation a:active, html .app-main .navigation a:hover, html .app-main .navigation a:focus, body #app .navigation a, body #app .navigation a:visited, body #app .navigation a:active, body #app .navigation a:hover, body #app .navigation a:focus, body .app-main .navigation a, body .app-main .navigation a:visited, body .app-main .navigation a:active, body .app-main .navigation a:hover, body .app-main .navigation a:focus {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 500; }
     html #app .left-panel, html .app-main .left-panel, body #app .left-panel, body .app-main .left-panel {
       float: left;
       width: 140px;
@@ -1080,6 +1085,8 @@ html, body {
         height: 100%;
         font-family: 'Roboto', sans-serif;
         font-family: 'Roboto Condensed', sans-serif; }
+        html #app .main-window .card.isamea, html .app-main .main-window .card.isamea, body #app .main-window .card.isamea, body .app-main .main-window .card.isamea {
+          width: 60%; }
         html #app .main-window .card.hide-state, html .app-main .main-window .card.hide-state, body #app .main-window .card.hide-state, body .app-main .main-window .card.hide-state {
           display: none; }
         html #app .main-window .card.show-state, html .app-main .main-window .card.show-state, body #app .main-window .card.show-state, body .app-main .main-window .card.show-state {
@@ -1106,6 +1113,31 @@ html, body {
           color: #000;
           display: block;
           font-size: 15px; }
+        html #app .main-window .card .jobs, html .app-main .main-window .card .jobs, body #app .main-window .card .jobs, body .app-main .main-window .card .jobs {
+          margin-top: 40px; }
+          html #app .main-window .card .jobs .job-position, html .app-main .main-window .card .jobs .job-position, body #app .main-window .card .jobs .job-position, body .app-main .main-window .card .jobs .job-position {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            flex-wrap: wrap; }
+            html #app .main-window .card .jobs .job-position .fex, html .app-main .main-window .card .jobs .job-position .fex, body #app .main-window .card .jobs .job-position .fex, body .app-main .main-window .card .jobs .job-position .fex {
+              display: flex;
+              flex-direction: column; }
+            html #app .main-window .card .jobs .job-position .name, html #app .main-window .card .jobs .job-position .description, html .app-main .main-window .card .jobs .job-position .name, html .app-main .main-window .card .jobs .job-position .description, body #app .main-window .card .jobs .job-position .name, body #app .main-window .card .jobs .job-position .description, body .app-main .main-window .card .jobs .job-position .name, body .app-main .main-window .card .jobs .job-position .description {
+              padding-bottom: 50px; }
+              html #app .main-window .card .jobs .job-position .name p, html #app .main-window .card .jobs .job-position .description p, html .app-main .main-window .card .jobs .job-position .name p, html .app-main .main-window .card .jobs .job-position .description p, body #app .main-window .card .jobs .job-position .name p, body #app .main-window .card .jobs .job-position .description p, body .app-main .main-window .card .jobs .job-position .name p, body .app-main .main-window .card .jobs .job-position .description p {
+                margin: 5px 0; }
+        html #app .main-window .card .line .line-bar, html .app-main .main-window .card .line .line-bar, body #app .main-window .card .line .line-bar, body .app-main .main-window .card .line .line-bar {
+          height: 100%;
+          width: 2px;
+          margin-left: 50%; }
+          html #app .main-window .card .line .line-bar .line-ball, html .app-main .main-window .card .line .line-bar .line-ball, body #app .main-window .card .line .line-bar .line-ball, body .app-main .main-window .card .line .line-bar .line-ball {
+            border-radius: 10px;
+            width: 14px;
+            height: 14px;
+            margin-top: 5px;
+            margin-left: -6px; }
 
 .navigation {
   padding: 20px 30px; }
@@ -1113,6 +1145,10 @@ html, body {
     padding: 5px 10px; }
 
 @media (max-width: 768px) {
+  .line {
+    display: none; } }
+
+@media (max-width: 830px) {
   html #app .left-panel, html .app-main .left-panel, body #app .left-panel, body .app-main .left-panel {
     width: 100px; }
     html #app .left-panel .branching, html .app-main .left-panel .branching, body #app .left-panel .branching, body .app-main .left-panel .branching {
@@ -1128,6 +1164,8 @@ html, body {
     html #app .main-window .card, html .app-main .main-window .card, body #app .main-window .card, body .app-main .main-window .card {
       float: none;
       height: auto; }
+      html #app .main-window .card.isamea, html .app-main .main-window .card.isamea, body #app .main-window .card.isamea, body .app-main .main-window .card.isamea {
+        width: 100%; }
       html #app .main-window .card.show-state, html .app-main .main-window .card.show-state, body #app .main-window .card.show-state, body .app-main .main-window .card.show-state {
         display: none; }
       html #app .main-window .card.hide-state, html .app-main .main-window .card.hide-state, body #app .main-window .card.hide-state, body .app-main .main-window .card.hide-state {

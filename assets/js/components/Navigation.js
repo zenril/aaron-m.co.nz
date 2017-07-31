@@ -7,7 +7,7 @@ import {
 
 const Navigation = () => (
     <div className='navigation'>
-        <Link to="/">Me</Link>
+        <Link to="/">Me</Link> | 
         <Link to="/examples">Examples</Link>
     </div>
 )
