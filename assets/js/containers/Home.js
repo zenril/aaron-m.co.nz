@@ -1,5 +1,5 @@
 var React = require('react');
-import Me from '../Me.js';
+import Me from '../components/Me.js';
 
 export default React.createClass({
     render: function () {

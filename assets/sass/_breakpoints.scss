@@ -27,11 +27,11 @@
                     float:none;
                     height: auto;
 
-                    &.show{
+                    &.show-state{
                         display: none;
                     }
 
-                    &.hide{
+                    &.hide-state{
                         display: block;
                     }
 

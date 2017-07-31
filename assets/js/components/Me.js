@@ -7,8 +7,8 @@ export default React.createClass({
 
         var classes = classSet({
             'card': true,
-            'show': !this.props.hide,
-            'hide': this.props.hide
+            'show-state': !this.props.hide,
+            'hide-state': this.props.hide
         });
 
         return (
@@ -20,7 +20,10 @@ export default React.createClass({
                     Wellington, New Zealand
                     <br/>
                     aaron@aaron-m.co.nz
-                </p> 
+                    <div>
+                        <a href=''>My CV</a>
+                    </div>
+                </p>
             </div>
 
         );

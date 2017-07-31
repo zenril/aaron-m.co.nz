@@ -1080,9 +1080,9 @@ html, body {
         height: 100%;
         font-family: 'Roboto', sans-serif;
         font-family: 'Roboto Condensed', sans-serif; }
-        html #app .main-window .card.hide, html .app-main .main-window .card.hide, body #app .main-window .card.hide, body .app-main .main-window .card.hide {
+        html #app .main-window .card.hide-state, html .app-main .main-window .card.hide-state, body #app .main-window .card.hide-state, body .app-main .main-window .card.hide-state {
           display: none; }
-        html #app .main-window .card.show, html .app-main .main-window .card.show, body #app .main-window .card.show, body .app-main .main-window .card.show {
+        html #app .main-window .card.show-state, html .app-main .main-window .card.show-state, body #app .main-window .card.show-state, body .app-main .main-window .card.show-state {
           display: block; }
         html #app .main-window .card h1, html #app .main-window .card h2, html .app-main .main-window .card h1, html .app-main .main-window .card h2, body #app .main-window .card h1, body #app .main-window .card h2, body .app-main .main-window .card h1, body .app-main .main-window .card h2 {
           font-weight: 300;
@@ -1128,9 +1128,9 @@ html, body {
     html #app .main-window .card, html .app-main .main-window .card, body #app .main-window .card, body .app-main .main-window .card {
       float: none;
       height: auto; }
-      html #app .main-window .card.show, html .app-main .main-window .card.show, body #app .main-window .card.show, body .app-main .main-window .card.show {
+      html #app .main-window .card.show-state, html .app-main .main-window .card.show-state, body #app .main-window .card.show-state, body .app-main .main-window .card.show-state {
         display: none; }
-      html #app .main-window .card.hide, html .app-main .main-window .card.hide, body #app .main-window .card.hide, body .app-main .main-window .card.hide {
+      html #app .main-window .card.hide-state, html .app-main .main-window .card.hide-state, body #app .main-window .card.hide-state, body .app-main .main-window .card.hide-state {
         display: block; }
       html #app .main-window .card h1, html #app .main-window .card h2, html .app-main .main-window .card h1, html .app-main .main-window .card h2, body #app .main-window .card h1, body #app .main-window .card h2, body .app-main .main-window .card h1, body .app-main .main-window .card h2 {
         font-weight: 300;

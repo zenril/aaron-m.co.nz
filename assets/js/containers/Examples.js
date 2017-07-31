@@ -1,10 +1,10 @@
 var React = require('react');
-import LeftItem3 from '../LeftItem3.js';
-import RightItem3 from '../RightItem3.js';
-import RightItemSlit from '../RightItemSlit.js';
-import LeftItemSlit from '../LeftItemSlit.js';
-import SingleLeft from '../SingleLeft.js';
-import SingleRight from '../SingleRight.js';
+import LeftItem3 from '../components/LeftItem3.js';
+import RightItem3 from '../components/RightItem3.js';
+import RightItemSlit from '../components/RightItemSlit.js';
+import LeftItemSlit from '../components/LeftItemSlit.js';
+import SingleLeft from '../components/SingleLeft.js';
+import SingleRight from '../components/SingleRight.js';
 
 export default React.createClass({
     render: function () {
@@ -13,62 +13,62 @@ export default React.createClass({
         
         var IMAGES =
         [{
-                src: "/img/samples/a.png",
+                src: "/img/assets/samples/a.png",
                 link: "https://www.harmonised.co.nz/",
                 desc: "Built with SilverStripe. I developed the site and gave design input."
         },
         {
-                src: "/img/samples/b.png",
+                src: "/img/assets/samples/b.png",
                 link: "https://www.printicular.com/nz/",
                 desc: "Logo I developed for Printicular brand, a photo printing app developed by MEA"
         },        
         {
-                src: "/img/samples/d.png",
+                src: "/img/assets/samples/d.png",
                 link: "http://my.rothbury.co.nz/",
                 desc: "Built with static HTML and javascript.  I developed this site, the design was provided by and external source."
         },
         {
-                src: "/img/samples/d.png",
+                src: "/img/assets/samples/d.png",
                 link: "http://my.rothbury.co.nz/",
                 desc: "Built with static HTML and javascript.  I developed this site, the design was provided by and external source."
         },
         {
-                src: "/img/samples/e.png",
+                src: "/img/assets/samples/e.png",
                 link: "https://www.savvykiwi.co.nz/",
                 desc: "Built with Laravel.  I developed this site, the design was provided by and external source."
         },
         {
-                src: "/img/samples/f.png",
+                src: "/img/assets/samples/f.png",
                 link: "https://www.savvykiwi.co.nz/",
                 desc: "Built with Laravel.  I developed this site, the design was provided by and external source."
         },
         {
-                src: "/img/samples/g.png",
+                src: "/img/assets/samples/g.png",
                 link: "http://www.seadragon.co.nz",
                 desc: "Built with Wordpress.  I developed this site and worked with the designer."
         },
         {
-                src: "/img/samples/h.png",
+                src: "/img/assets/samples/h.png",
                 link: "http://www.seadragon.co.nz",
                 desc: "Built with Wordpress.  I developed this site and worked with the designer."
         },
         {
-                src: "/img/samples/i.png",
+                src: "/img/assets/samples/i.png",
                 link: "http://www.seadragon.co.nz",
                 desc: "Built with Wordpress.  I developed this site and worked with the designer."
         },
         {
-                src: "/img/samples/j.png",
+                src: "/img/assets/samples/j.png",
                 link: "http://prospectus.waikatodiocesan.school.nz",
                 desc: "Built with SilverStripe. I developed this site and gave design input."
         },
         {
-                src: "/img/samples/k.png",
+                src: "/img/assets/samples/k.png",
                 link: "http://prospectus.waikatodiocesan.school.nz",
                 desc: "Built with SilverStripe. I developed this site and gave design input."
         },
         {
-                src: "/img/samples/l.png",
+                src: "/img/assets/samples/l.png",
                 link: "cloudfarmer.co.nz",
                 desc: "Built with Symfony. I built the Phone API and maintained AngularJS front end."
         }];
@@ -77,14 +77,14 @@ export default React.createClass({
         var IMAGES_TEST =
         [{      
                 name: "Waikato Diocesan Prospectus",
-                src: ["/img/samples/dio/1.png", "/img/samples/dio/2.png", "/img/samples/dio/3.png"],
+                src: ["/img/assets/samples/dio/1.png", "/img/assets/samples/dio/2.png", "/img/assets/samples/dio/3.png"],
                 link: "http://prospectus.waikatodiocesan.school.nz",
                 built: "SilverStripe",
                 desc: (<div>I built the Waikato Diocesan prospectus site while making design tweaks to keep elements consistant and fresh.</div>),
                 mode: 1
         },{     
                 name: "Sea Dragon",
-                src: ["/img/samples/seadragon/1.png", "/img/samples/seadragon/2.png", "/img/samples/seadragon/3.png"],
+                src: ["/img/assets/samples/seadragon/1.png", "/img/assets/samples/seadragon/2.png", "/img/assets/samples/seadragon/3.png"],
                 link: "http://www.seadragon.co.nz",
                 built :"Wordpress",
                 desc: (<div>I developed this site while working with a designer to get a quick turn around.</div>),
@@ -92,21 +92,21 @@ export default React.createClass({
         },
         {     
                 name: "Harmonised",
-                src: ["/img/samples/harmonised/1.png", "/img/samples/harmonised/2.png", "/img/samples/harmonised/3.png"],
+                src: ["/img/assets/samples/harmonised/1.png", "/img/assets/samples/harmonised/2.png", "/img/assets/samples/harmonised/3.png"],
                 link: "https://www.harmonised.co.nz/",
                 built :"Silverstripe",
                 desc: (<div>The harmonised website is single page site with a heavely modified admin interface. </div>),
                 mode: 3
         },{     
                 name: "Cloud Farmer",
-                src: ["/img/samples/agrecord/1.png"],
+                src: ["/img/assets/samples/agrecord/1.png"],
                 link: "http://cloudfarmer.co.nz/",
                 built :"Symfony",
                 desc: (<div>I built an API that syncs with native phone applications, and maintained AngularJS on the front end.</div>),
                 mode: 4
         },{     
                 name: "SavvyKiwi",
-                src: ["/img/samples/savvy/1.png", "/img/samples/savvy/2.png", "/img/samples/savvy/3.png"],
+                src: ["/img/assets/samples/savvy/1.png", "/img/assets/samples/savvy/2.png", "/img/assets/samples/savvy/3.png"],
                 link: "https://www.savvykiwi.co.nz",
                 built :"Laravel",
                 desc: (<div>I built a custom CMS for the front sales pages. The Back end was built connecting to the same API's that the SavvyKiwi phone apps connected to.</div>),

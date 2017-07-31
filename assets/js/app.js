@@ -8,10 +8,10 @@ import {
   Link
 } from 'react-router-dom'
 
-import Home from '../components/pages/Home.js';
-import Examples from '../components/pages/Examples.js';
-import Branching from '../components/Branching.js';
-import Navigation from '../components/Navigation.js';
+import Home from './containers/Home.js';
+import Examples from './containers/Examples.js';
+import Branching from './components/Branching.js';
+import Navigation from './components/Navigation.js';
 
 
 var App = React.createClass({
