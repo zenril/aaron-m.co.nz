@@ -1026,11 +1026,6 @@ html, body {
     -moz-osx-font-smoothing: grayscale; }
   html #app, html .app-main, body #app, body .app-main {
     height: 100%; }
-    html #app .navigation a, html #app .navigation a:visited, html #app .navigation a:active, html #app .navigation a:hover, html #app .navigation a:focus, html .app-main .navigation a, html .app-main .navigation a:visited, html .app-main .navigation a:active, html .app-main .navigation a:hover, html .app-main .navigation a:focus, body #app .navigation a, body #app .navigation a:visited, body #app .navigation a:active, body #app .navigation a:hover, body #app .navigation a:focus, body .app-main .navigation a, body .app-main .navigation a:visited, body .app-main .navigation a:active, body .app-main .navigation a:hover, body .app-main .navigation a:focus {
-      color: white;
-      text-decoration: none;
-      font-size: 18px;
-      font-weight: 500; }
     html #app .cv a, html .app-main .cv a, body #app .cv a, body .app-main .cv a {
       display: block;
       padding: 20px 30px;
@@ -1146,12 +1141,16 @@ html, body {
 
 .navigation {
   padding: 0px 30px; }
-  .navigation a {
+  .navigation a, .navigation a:visited, .navigation a:active, .navigation a:hover, .navigation a:focus {
     padding: 0 20px;
     line-height: 50px;
     height: 50px;
-    display: inline-block; }
-    .navigation a:hover {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500; }
+    .navigation a:hover, .navigation a:visited:hover, .navigation a:active:hover, .navigation a:hover:hover, .navigation a:focus:hover {
       background: rgba(0, 0, 0, 0.2); }
 
 @media (max-width: 768px) {
