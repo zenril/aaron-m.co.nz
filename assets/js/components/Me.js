@@ -17,7 +17,7 @@ export default React.createClass({
             <div className={classes}>
                 <h1><strong>Aaron Meredith</strong></h1>
                 <h2 className='color3t'>Full Stack Web Developer</h2>
-                <p>
+              
                     Wellington, New Zealand
                     <br/>
                     aaron@aaron-m.co.nz
@@ -71,12 +71,11 @@ export default React.createClass({
                                 <p>This was a full time paid internship during the summer break of the second year</p>
                                 of study. After the internship I took on a full time position.
                                 <p>Frontend development which included Java, JSP, Servlets, Javascript, CSS</p>
-
                             </div>
                             <div className='clearfix'></div>
                         </div>
                     </div>
-                </p>
+                
             </div>
 
         );
