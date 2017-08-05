@@ -6,6 +6,7 @@
     top:0;
     left:0;width: 100%;
     z-index: 2;
+
     ul{
         list-style: none;
         margin:0;
@@ -18,20 +19,22 @@
     
     .menu{
         position: relative;
-        z-index: 1;
-        transition: all 0.3s;
-        height:500px;
-        width:500px;
+        z-index: -1;
+        transition: all 0.9s;
+        height:0px;
+        width:0px;
+        max-width: 100%;
         border-radius: 0 0 2000px 0;
         position: absolute;
-        top: -600px;
-        
+        top: 50px;
+        overflow: hidden;
     }
 
     .activator {
 
         a{
             padding:15px !important;
+
             .toggle-bar{
                 display: block;
                 margin-bottom:4px;
@@ -40,20 +43,52 @@
                 border-radius: 2px;
                 background: white;
                 background: rgba(255,255,255,0.4);
+                transform: rotate(0deg);
+                transition: all 0.9s;
+                
+                &:first-child{
+                    // transform-origin: 25px 10px;
+                    transform-origin: 23px 6px;
+                }
+                
+                &:last-child  {
+                    // transform-origin: -25px -10px;
+                    transform-origin: 19px 0px;
+                }
             }
         }
 
         &.active {
             .menu {
                 top: 50px;
-               
-            }                
+                height:500px;
+                width:500px;
+            }             
+
+            .toggle-bar{
+                
+                
+                background: rgba(255,255,255,0);
+                &:first-child{
+                    transform: rotate(-45deg);
+                    background: rgba(255,255,255,0.4);
+                    display:block;
+                }
+                
+                &:last-child  {
+                    transform: rotate(45deg);
+                    background: rgba(255,255,255,0.4);
+                    display:block;
+                }
+            }
+
         }
     }
 
+
     a,a:visited,a:active,a:hover,a:focus  {
         padding: 0 20px;
-        line-height: 50px;
+        line-height: 20px;
         height: 50px;
         display: inline-block;
 

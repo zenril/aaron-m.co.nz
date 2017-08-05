@@ -7,27 +7,25 @@
 
 @media (max-width: 830px) {
     html, body {
-
-       
-
         #app, .app-main {
             .left-panel {
                 width:$smallPanelsplit;
  
                 .branching {
                     height: 100%;
-                    padding: 0 28px;
+                    padding: 0 6px;
+
+                    svg {
+                        max-width: 56px;
+                    }
                 }
             } 
             
-            
-
             .main-window{
                 left:$smallPanelsplit;
 
                 .example-img {
-                    width:80%;
-                    padding-bottom: 46.25%;
+                    margin-bottom: 46.25%;
                 }
                 
                 .card1{ 
@@ -38,7 +36,7 @@
                     float:none;
                     height: auto;
 
-                     &.isamea {
+                    &.isamea {
                         width:100%;
                     }
 
@@ -49,7 +47,6 @@
                     &.hide-state{
                         display: block;
                     }
-
 
                     h1, h2 {
                         font-weight: 300;

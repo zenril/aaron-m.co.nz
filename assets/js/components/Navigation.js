@@ -42,10 +42,10 @@ import {
                     </a>
                     <div className='menu color3'>
                         <ul>
-                            <li>
+                            <li onClick={this.handleHoverOff}>
                                 <Link to="/">Me</Link>
                             </li>
-                            <li>
+                            <li onClick={this.handleHoverOff}>
                                 <Link to="/examples">Examples</Link>
                             </li>
                             <li>

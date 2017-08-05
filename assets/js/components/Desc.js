@@ -6,20 +6,26 @@ export default React.createClass({
     render: function () {
 
         var classes = classSet({
-            'description': true
+            'description': true,
+            'col-sm-12' : true
         });
 
         return (
 
             <div className={classes}>
-                <h1>{this.props.obj.name}</h1>
-                <h3>Built with: {this.props.obj.built}</h3>
-                <a href={this.props.obj.link}>{this.props.obj.link}</a>
-                 {this.props.obj.desc}
+                <div className='col-sm-12'>
+                    <h1 className="color3">{this.props.obj.name}</h1>
+                </div>
+                <div className='col-sm-12'>
+                   
+                    <a className="color3" href={this.props.obj.link}>{this.props.obj.link}</a>
+                    <h3 className="color3">Built with: {this.props.obj.built}</h3>
+                </div>
+                <div className='col-sm-4 desco'>
+                    {this.props.obj.desc}
+                </div>
             </div>
 
         );
     }
 });
-
-
