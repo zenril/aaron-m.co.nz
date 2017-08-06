@@ -10,13 +10,21 @@ html, body {
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
     }
-    .example-container{
+    .example-container, .container-play{
         margin-top:100px;
     }
+
+    .container-play{
+        padding:0px 40px;
+        .play-thing{
+            img {
+                height: 28px;
+            }
+        }
+    }
+
     #app, .app-main {
         height:100%;
-
-       
 
         .cv{
             a {
@@ -105,16 +113,18 @@ html, body {
                 margin-top:40px;
           
                 .description{
-
-                    
-                    padding:30px;
+                    overflow: hidden;
+                    background: rgba(255,255,255,0.9);
+                    padding: 20px;
+                    position: absolute;
+                    bottom: -90px;
                     
                     h1{
                         margin: 0;
                     }
 
                     .desco{
-                        
+                        width: 40%;
                     }
 
                     a{
@@ -122,7 +132,7 @@ html, body {
                     }
 
                     .color3{
-                        background: white;
+                        background: none;
                         
                     }
                     

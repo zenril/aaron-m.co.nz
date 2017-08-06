@@ -1024,8 +1024,12 @@ html, body {
     font-weight: 300;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  html .example-container, body .example-container {
+  html .example-container, html .container-play, body .example-container, body .container-play {
     margin-top: 100px; }
+  html .container-play, body .container-play {
+    padding: 0px 40px; }
+    html .container-play .play-thing img, body .container-play .play-thing img {
+      height: 28px; }
   html #app, html .app-main, body #app, body .app-main {
     height: 100%; }
     html #app .cv a, html .app-main .cv a, body #app .cv a, body .app-main .cv a {
@@ -1084,13 +1088,19 @@ html, body {
         margin-bottom: 200px;
         margin-top: 40px; }
         html #app .main-window .example-img .description, html .app-main .main-window .example-img .description, body #app .main-window .example-img .description, body .app-main .main-window .example-img .description {
-          padding: 30px; }
+          overflow: hidden;
+          background: rgba(255, 255, 255, 0.9);
+          padding: 20px;
+          position: absolute;
+          bottom: -90px; }
           html #app .main-window .example-img .description h1, html .app-main .main-window .example-img .description h1, body #app .main-window .example-img .description h1, body .app-main .main-window .example-img .description h1 {
             margin: 0; }
+          html #app .main-window .example-img .description .desco, html .app-main .main-window .example-img .description .desco, body #app .main-window .example-img .description .desco, body .app-main .main-window .example-img .description .desco {
+            width: 40%; }
           html #app .main-window .example-img .description a, html .app-main .main-window .example-img .description a, body #app .main-window .example-img .description a, body .app-main .main-window .example-img .description a {
             word-wrap: break-word; }
           html #app .main-window .example-img .description .color3, html .app-main .main-window .example-img .description .color3, body #app .main-window .example-img .description .color3, body .app-main .main-window .example-img .description .color3 {
-            background: white; }
+            background: none; }
       html #app .main-window .cards, html .app-main .main-window .cards, body #app .main-window .cards, body .app-main .main-window .cards {
         height: 100%;
         overflow-y: auto; }
@@ -1243,6 +1253,13 @@ html, body {
     left: 68px; }
     html #app .main-window .example-img, html .app-main .main-window .example-img, body #app .main-window .example-img, body .app-main .main-window .example-img {
       margin-bottom: 46.25%; }
+      html #app .main-window .example-img .description, html .app-main .main-window .example-img .description, body #app .main-window .example-img .description, body .app-main .main-window .example-img .description {
+        position: relative;
+        bottom: 0; }
+        html #app .main-window .example-img .description h1, html .app-main .main-window .example-img .description h1, body #app .main-window .example-img .description h1, body .app-main .main-window .example-img .description h1 {
+          margin: 0; }
+        html #app .main-window .example-img .description .desco, html .app-main .main-window .example-img .description .desco, body #app .main-window .example-img .description .desco, body .app-main .main-window .example-img .description .desco {
+          width: 100%; }
     html #app .main-window .card1, html .app-main .main-window .card1, body #app .main-window .card1, body .app-main .main-window .card1 {
       border: 0; }
     html #app .main-window .card, html .app-main .main-window .card, body #app .main-window .card, body .app-main .main-window .card {

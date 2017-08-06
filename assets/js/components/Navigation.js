@@ -48,6 +48,9 @@ import {
                             <li onClick={this.handleHoverOff}>
                                 <Link to="/examples">Examples</Link>
                             </li>
+                            <li onClick={this.handleHoverOff}>
+                                <Link to="/play">Play</Link>
+                            </li>
                             <li>
                                 <a className='pull-right-left' target="_blank" href='/assets/docs/aaron-meredith-cv.pdf'>View my CV</a>
                             </li>

@@ -31,7 +31,7 @@ export default React.createClass({
               .color3,.navigation{\
                 background-color:"+ this.state.color3 + ";\
               }\
-              .color3t, h2{\
+              .color3t, h2, a, a:active, a:hover , h1{\
                 color:"+ this.state.color3 + ";\
               }\
               "} 

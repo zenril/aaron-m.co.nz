@@ -15,7 +15,7 @@ export default React.createClass({
 
             <div className={classes}>              
                 <div className='col-sm-12 gallery'>
-                     <Media query={{ minWidth: 900 }}>
+                     <Media query={{ minWidth: 830 }}>
                         {matches => matches ? (
                             <img src={this.props.obj.src[0] + "/splash.jpg" } />
                         ) : (

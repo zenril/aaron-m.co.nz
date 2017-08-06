@@ -13188,6 +13188,10 @@ var _Home = __webpack_require__(289);
 
 var _Home2 = _interopRequireDefault(_Home);
 
+var _Play = __webpack_require__(302);
+
+var _Play2 = _interopRequireDefault(_Play);
+
 var _Examples = __webpack_require__(291);
 
 var _Examples2 = _interopRequireDefault(_Examples);
@@ -13199,6 +13203,10 @@ var _Branching2 = _interopRequireDefault(_Branching);
 var _Navigation = __webpack_require__(301);
 
 var _Navigation2 = _interopRequireDefault(_Navigation);
+
+var _Parzen = __webpack_require__(304);
+
+var _Parzen2 = _interopRequireDefault(_Parzen);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -13232,7 +13240,9 @@ var App = React.createClass({
                         { className: 'cards' },
                         React.createElement(_Navigation2.default, null),
                         React.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _Home2.default }),
-                        React.createElement(_reactRouterDom.Route, { exact: true, path: '/examples', component: _Examples2.default })
+                        React.createElement(_reactRouterDom.Route, { exact: true, path: '/examples', component: _Examples2.default }),
+                        React.createElement(_reactRouterDom.Route, { exact: true, path: '/play', component: _Play2.default }),
+                        React.createElement(_reactRouterDom.Route, { path: '/play/parzen', component: _Parzen2.default })
                     )
                 )
             )
@@ -32469,7 +32479,7 @@ exports.default = React.createClass({
                 { className: 'col-sm-12 gallery' },
                 React.createElement(
                     _reactMedia2.default,
-                    { query: { minWidth: 900 } },
+                    { query: { minWidth: 830 } },
                     function (matches) {
                         return matches ? React.createElement('img', { src: _this.props.obj.src[0] + "/splash.jpg" }) : React.createElement('img', { src: _this.props.obj.src[0] + "/thumb.jpg" });
                     }
@@ -32721,7 +32731,7 @@ exports.default = React.createClass({
             { className: classes },
             React.createElement(
                 'div',
-                { className: 'col-sm-12' },
+                { className: '' },
                 React.createElement(
                     'h1',
                     { className: 'color3' },
@@ -32730,7 +32740,7 @@ exports.default = React.createClass({
             ),
             React.createElement(
                 'div',
-                { className: 'col-sm-12' },
+                { className: '' },
                 React.createElement(
                     'a',
                     { className: 'color3', href: this.props.obj.link },
@@ -32745,7 +32755,7 @@ exports.default = React.createClass({
             ),
             React.createElement(
                 'div',
-                { className: 'col-sm-4 desco' },
+                { className: ' desco' },
                 this.props.obj.desc
             )
         );
@@ -32811,7 +32821,7 @@ exports.default = _react2.default.createClass({
               .color3,.navigation{\
                 background-color:" + this.state.color3 + ";\
               }\
-              .color3t, h2{\
+              .color3t, h2, a, a:active, a:hover , h1{\
                 color:" + this.state.color3 + ";\
               }\
               "
@@ -34457,6 +34467,15 @@ var Navigation = function (_React$Component) {
                                 ),
                                 React.createElement(
                                     'li',
+                                    { onClick: this.handleHoverOff },
+                                    React.createElement(
+                                        _reactRouterDom.Link,
+                                        { to: '/play' },
+                                        'Play'
+                                    )
+                                ),
+                                React.createElement(
+                                    'li',
                                     null,
                                     React.createElement(
                                         'a',
@@ -34476,6 +34495,511 @@ var Navigation = function (_React$Component) {
 }(React.Component);
 
 exports.default = Navigation;
+
+/***/ }),
+/* 302 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _reactRouterDom = __webpack_require__(108);
+
+var _Splash = __webpack_require__(292);
+
+var _Splash2 = _interopRequireDefault(_Splash);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var React = __webpack_require__(2);
+var ParZen = __webpack_require__(303);
+
+
+var PlayThing = function PlayThing(props) {
+
+    return React.createElement(
+        'div',
+        { className: 'play-thing row' },
+        React.createElement(
+            'div',
+            { className: 'col-xs-12' },
+            React.createElement(
+                'h1',
+                null,
+                props.part.name
+            ),
+            React.createElement(
+                'a',
+                { href: props.part.github },
+                React.createElement('img', { src: '/assets/img/github.svg' })
+            ),
+            React.createElement(
+                'a',
+                { href: props.part.npm },
+                React.createElement('img', { src: '/assets/img/npm.svg' })
+            )
+        ),
+        React.createElement(
+            'div',
+            { className: 'col-xs-12' },
+            React.createElement(
+                'span',
+                null,
+                ' ',
+                props.part.decription,
+                ' '
+            )
+        ),
+        React.createElement('div', { className: 'col-xs-12' })
+    );
+};
+
+var Play = function (_React$Component) {
+    _inherits(Play, _React$Component);
+
+    function Play(props) {
+        _classCallCheck(this, Play);
+
+        var _this = _possibleConstructorReturn(this, (Play.__proto__ || Object.getPrototypeOf(Play)).call(this, props));
+
+        _this.state = {
+            messages: []
+        };
+        return _this;
+    }
+
+    _createClass(Play, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            var self = this;
+            var json = {
+                "root": ["you {{miss}} {{number}} percent of the {{things}} you {{end}}."],
+                "miss": ["miss", "hit", "take", "throw"],
+                "number": ["20", "40", "60", "80", "100"],
+                "things": ["papers", "turnips", "shots", "chances"],
+                "end": ["never {{action}}", "won't {{action}}", "did {{action}}"],
+                "action": ["plant", "write", "taste", "touch", "open", "{{miss}}"]
+            };
+
+            var pz = new ParZen(json);
+            var sentence = pz.build();
+
+            this.setState(function (state) {
+                state.messages.push(sentence);
+            });
+        }
+        /*
+        {
+                            this.state.messages.map(function(item, i){
+                                return (
+                                    <div key={i}>
+                                        {item}
+                                    </div> 
+                                )
+                            })
+                        }*/
+
+    }, {
+        key: 'render',
+        value: function render() {
+
+            var playthings = [{
+                "name": "ParZen",
+                "page": "parzen",
+                "decription": React.createElement(
+                    'div',
+                    null,
+                    React.createElement(
+                        'strong',
+                        null,
+                        'A library for generating random but formatted sets of words.'
+                    ),
+                    React.createElement(
+                        'div',
+                        null,
+                        'Create lists of words and phrases. Combine them together to create phrases, sentences and stories.'
+                    ),
+                    React.createElement(
+                        'ul',
+                        null,
+                        React.createElement(
+                            'li',
+                            null,
+                            'Create and store variables for re-use from Randomly chosen words'
+                        ),
+                        React.createElement(
+                            'li',
+                            null,
+                            'Supports Indefinite Article'
+                        ),
+                        React.createElement(
+                            'li',
+                            null,
+                            'Most pluralization, I still have work to do on Plural Possessives.'
+                        )
+                    ),
+                    React.createElement(
+                        'strong',
+                        null,
+                        'There are a few over writeable formatting functions that are baked in like'
+                    ),
+                    React.createElement(
+                        'ul',
+                        null,
+                        React.createElement(
+                            'li',
+                            null,
+                            'Full upper case'
+                        ),
+                        React.createElement(
+                            'li',
+                            null,
+                            'Upper case start of words'
+                        ),
+                        React.createElement(
+                            'li',
+                            null,
+                            'Upper case only the very first character'
+                        ),
+                        React.createElement(
+                            'li',
+                            null,
+                            'Pluralization based on context'
+                        ),
+                        React.createElement(
+                            'li',
+                            null,
+                            'Always pluralize'
+                        ),
+                        React.createElement(
+                            'li',
+                            null,
+                            'conditional pluralization'
+                        )
+                    )
+                ),
+                "github": "https://github.com/zenril/parzen",
+                "npm": "https://www.npmjs.com/package/parzen"
+            }];
+
+            return React.createElement(
+                'div',
+                { className: 'container-play' },
+                playthings.map(function (object, i) {
+
+                    return React.createElement(PlayThing, { part: object, key: i });
+                })
+            );
+        }
+    }]);
+
+    return Play;
+}(React.Component);
+
+exports.default = Play;
+
+/***/ }),
+/* 303 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(global) {
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+function ParZen(e) {
+  function r() {
+    return n.userData.__finish__ = [n.getNode("root").str], n.getNode("__finish__").str;
+  }var t = this,
+      n = t;n.data = e, n.userData = {}, n.variables = {}, t.formatters = {}, t.preformatters = {}, n.pathMap = {}, n.flags = {}, t.json = function (e) {
+    n.data = e;
+  }, t.getUserTemplateVariables = function () {
+    return n.userData;
+  };for (var a in ParZen.formatters) {
+    t.formatters[a] = ParZen.formatters[a];
+  }for (var a in ParZen.preformatters) {
+    t.preformatters[a] = ParZen.preformatters[a];
+  }n.indefiniteArticle = indefiniteArticle, n.plural = plural, n.getNode = function (e, r) {
+    var a = n.data[e];a || (a = n.userData[e]);var i = null;if (!a) return !1;for (var o = a, s = [], u = "undefined" != typeof r && null != r ? r : [], f = 0;;) {
+      var i = u[f];if (f++, isNaN(i)) {
+        if (!i || !o[i]) {
+          var l = Object.keys(o);i = l[Math.floor(Math.random() * l.length)];
+        }
+      } else i = +i - 1;if (!o[i]) break;if (o = o[i], isNaN(i) && s.push(i), "string" == typeof o) break;
+    }var p = o;if ("string" != typeof p) return !1;var h = p.match(/\{\{([ a-zA-Z0-9:.\-_#\*\&\?|\#\+\*\-\%\^\=\/]*)\}\}/g);for (var f in h) {
+      var c = h[f],
+          m = c.substr(2, c.length - 4).trim(),
+          v = m.split("|"),
+          d = v.splice(1),
+          $ = [],
+          r = null;for (var g in d) {
+        var y = d[g].split(":");$.push(y || !1), "like" == y[0] && n.pathMap[y[1]] && n.pathMap[y[1]][1] && (r = n.pathMap[y[1]][1]);
+      }m = v[0].trim();var N = m.split(":"),
+          e = N[1] || N[0];e && e.indexOf(".") != -1 && (r = e.split("."), e = r.shift());var w = n.getNode(e.trim(), r);if (w !== !1 || "#" == e.trim()) {
+        for (var x = w.str || "", b = 0; b < $.length; b++) {
+          var g = $[b][0];t.preformatters[g] && (func = t.preformatters[g], x = func.apply(t, [x, $[b]]));
+        }if (N[1] && N[0]) {
+          var M = n.userData[N[0]];if (null != s && s.length) {
+            var Z = n.userData[N[0]] = {};0 == s.length && (Z = n.userData[N[0]] = []);for (var P = 0; P < s.length; P++) {
+              Z[s[P]] || (P == s.length - 1 ? Z[s[P]] = [] : Z[s[P]] = {}), Z = Z[s[P]];
+            }M = Z;
+          } else M = n.userData[N[0]] = [];M.push(x + "");var r = n.pathMap[N[0]] = [N[1], w.pathMap];
+        }for (var b = 0; b < $.length; b++) {
+          var g = $[b][0];t.formatters[g] && (func = t.formatters[t.formatters[g][0]], x = func.apply(t, [x, $[b]]));
+        }p = p.replace(c, x);
+      }
+    }var A = p.match(/\{\[([a-zA-Z0-9:.\-_\*\&?|'\/\{\}]*)\]\}/g);for (var j in A) {
+      var O = A[j],
+          z = O.substr(2, O.length - 4).split("?"),
+          D = z[0].split(":"),
+          E = z[1].substr(1, z[1].length - 2).split(/['"]\:['"]/),
+          W = E[1];if (n.userData[D[0]] && n.userData[D[0]][0]) {
+        var k = n.userData[D[0]][0];n.variables[k] == D[1] && (W = E[0]);
+      }p = p.replace(O, W), p = n.getNode(p).str;
+    }return { str: p, pathMap: s };
+  }, t.build = function () {
+    return n.variables = {}, n.data = e, r();
+  };
+}function moduleinit() {
+  "undefined" != typeof module && module.exports && (module.exports = ParZen);
+}function indefiniteArticle(e) {
+  var r = /\w+/.exec(e);if (!r) return "an";var t = r[0],
+      n = t.toLowerCase(),
+      a = ["honest", "hour", "hono"];for (var i in a) {
+    if (0 == n.indexOf(a[i])) return "an";
+  }if (1 == n.length) return "aedhilmnorsx".indexOf(n) >= 0 ? "an" : "a";if (t.match(/(?!FJO|[HLMNS]Y.|RY[EO]|SQU|(F[LR]?|[HL]|MN?|N|RH?|S[CHKLMNPTVW]?|X(YL)?)[AEIOU])[FHLMNRSX][A-Z]/)) return "an";regexes = [/^e[uw]/, /^onc?e\b/, /^uni([^nmd]|mo)/, /^u[bcfhjkqrst][aeiou]/];for (var i in regexes) {
+    if (n.match(regexes[i])) return "a";
+  }return t.match(/^U[NK][AIEO]/) ? "a" : t == t.toUpperCase() ? "aedhilmnorsx".indexOf(n[0]) >= 0 ? "an" : "a" : "aeiou".indexOf(n[0]) >= 0 ? "an" : n.match(/^y(b[lor]|cl[ea]|fere|gg|p[ios]|rou|tt)/) ? "an" : "a";
+}function plural(e, r) {
+  var t = { "(quiz)$": "$1zes", "^(ox)$": "$1en", "([m|l])ouse$": "$1ice", "(matr|vert|ind)ix|ex$": "$1ices", "(x|ch|ss|sh)$": "$1es", "([^aeiouy]|qu)y$": "$1ies", "(hive)$": "$1s", "(?:([^f])fe|([lr])f)$": "$1$2ves", "(shea|lea|loa|thie)f$": "$1ves", sis$: "ses", "([ti])um$": "$1a", "(tomat|potat|ech|her|vet)o$": "$1oes", "(bu)s$": "$1ses", "(alias)$": "$1es", "(octop)us$": "$1i", "(ax|test)is$": "$1es", "(us)$": "$1es", "([^s]+)$": "$1s" },
+      n = { "(quiz)zes$": "$1", "(matr)ices$": "$1ix", "(vert|ind)ices$": "$1ex", "^(ox)en$": "$1", "(alias)es$": "$1", "(octop|vir)i$": "$1us", "(cris|ax|test)es$": "$1is", "(shoe)s$": "$1", "(o)es$": "$1", "(bus)es$": "$1", "([m|l])ice$": "$1ouse", "(x|ch|ss|sh)es$": "$1", "(m)ovies$": "$1ovie", "(s)eries$": "$1eries", "([^aeiouy]|qu)ies$": "$1y", "([lr])ves$": "$1f", "(tive)s$": "$1", "(hive)s$": "$1", "(li|wi|kni)ves$": "$1fe", "(shea|loa|lea|thie)ves$": "$1f", "(^analy)ses$": "$1sis", "((a)naly|(b)a|(d)iagno|(p)arenthe|(p)rogno|(s)ynop|(t)he)ses$": "$1$2sis", "([ti])a$": "$1um", "(n)ews$": "$1ews", "(h|bl)ouses$": "$1ouse", "(corpse)s$": "$1", "(us)es$": "$1", s$: "" },
+      a = { move: "moves", foot: "feet", goose: "geese", sex: "sexes", child: "children", man: "men", tooth: "teeth", person: "people" },
+      i = ["sheep", "fish", "deer", "moose", "series", "species", "money", "rice", "information", "equipment"];if (i.indexOf(e.toLowerCase()) >= 0) return e;for (word in a) {
+    if (r) var o = new RegExp(a[word] + "$", "i"),
+        s = word;else var o = new RegExp(word + "$", "i"),
+        s = a[word];if (o.test(e)) return e.replace(o, s);
+  }if (r) var u = n;else var u = t;for (reg in u) {
+    var o = new RegExp(reg, "i");if (o.test(e)) return e.replace(o, u[reg]);
+  }return e;
+}ParZen.formatters = {}, ParZen.preformatters = {}, moduleinit();var NtoW = function () {
+  function e(e) {
+    return !("number" != typeof e || e !== e || e === 1 / 0 || e === -(1 / 0));
+  }function r(e) {
+    return s.test(e) || u.test(e) ? e + "th" : f.test(e) ? e.replace(f, "ieth") : l.test(e) ? e.replace(l, t) : e;
+  }function t(e, r) {
+    return p[r];
+  }function n(r) {
+    var t = parseInt(r, 10);if (!e(t)) throw new TypeError("Not a finite number: " + r + " (" + (typeof r === "undefined" ? "undefined" : _typeof(r)) + ")");var n = String(t),
+        a = t % 100,
+        i = a >= 11 && a <= 13,
+        o = n.charAt(n.length - 1);return n + (i ? "th" : "1" === o ? "st" : "2" === o ? "nd" : "3" === o ? "rd" : "th");
+  }function a(t, n) {
+    var a,
+        o = parseInt(t, 10);if (!e(o)) throw new TypeError("Not a finite number: " + t + " (" + (typeof t === "undefined" ? "undefined" : _typeof(t)) + ")");return a = i(o), n ? r(a) : a;
+  }function i(e) {
+    var r,
+        t,
+        n = arguments[1];return 0 === e ? n ? n.join(" ").replace(/,$/, "") : "zero" : (n || (n = []), e < 0 && (n.push("minus"), e = Math.abs(e)), e < 20 ? (r = 0, t = N[e]) : e < c ? (r = e % h, t = w[Math.floor(e / h)], r && (t += "-" + N[r], r = 0)) : e < m ? (r = e % c, t = i(Math.floor(e / c)) + " hundred") : e < v ? (r = e % m, t = i(Math.floor(e / m)) + " thousand,") : e < d ? (r = e % v, t = i(Math.floor(e / v)) + " million,") : e < $ ? (r = e % d, t = i(Math.floor(e / d)) + " billion,") : e < g ? (r = e % $, t = i(Math.floor(e / $)) + " trillion,") : e <= y && (r = e % g, t = i(Math.floor(e / g)) + " quadrillion,"), n.push(t), i(r, n));
+  }function o(e) {
+    var t = a(e);return r(t);
+  }var s = ("object" == (typeof self === "undefined" ? "undefined" : _typeof(self)) && self.self === self && self || "object" == (typeof global === "undefined" ? "undefined" : _typeof(global)) && global.global === global && global || this, /(hundred|thousand|(m|b|tr|quadr)illion)$/),
+      u = /teen$/,
+      f = /y$/,
+      l = /(zero|one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve)$/,
+      p = { zero: "zeroth", one: "first", two: "second", three: "third", four: "fourth", five: "fifth", six: "sixth", seven: "seventh", eight: "eighth", nine: "ninth", ten: "tenth", eleven: "eleventh", twelve: "twelfth" },
+      h = 10,
+      c = 100,
+      m = 1e3,
+      v = 1e6,
+      d = 1e9,
+      $ = 1e12,
+      g = 1e15,
+      y = 9007199254740992,
+      N = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"],
+      w = ["zero", "ten", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"];return { toOrdinal: n, toWords: a, toWordsOrdinal: o };
+}(),
+    WtoN = { units: { zero: 0, one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eight: 8, nine: 9, ten: 10, eleven: 11, twelve: 12, thirteen: 13, fourteen: 14, fifteen: 15, sixteen: 16, seventeen: 17, eighteen: 18, nineteen: 19, twenty: 20, thirty: 30, forty: 40, fifty: 50, sixty: 60, seventy: 70, eighty: 80, ninety: 90 }, magnitudes: { hundred: 100, thousand: 1e3, million: 1e6, billion: 1e9, trillion: 1e12 }, convert: function convert(e) {
+    return this.compute(this.tokenize(e));
+  }, prepare: function prepare(e) {
+    var r = Object.keys(this.units),
+        t = Object.keys(this.magnitudes),
+        n = "[0-9]+|" + r.join("|") + "|" + t.join("|") + "|and|[ ]+";return e = e.replace(new RegExp("(" + n + ")", "g"), " $1"), e = e.replace(new RegExp("(" + n + "|ty|teen)|[^]", "g"), "$1");
+  }, tokenize: function tokenize(e) {
+    e = this.prepare(e);var r = e.split(" "),
+        t = [];return r.forEach(function (e) {
+      isNaN(+e) ? "and" == e || t.push(e) : t.push(+e);
+    }), t;
+  }, compute: function compute(e) {
+    var r,
+        t = this,
+        n = 0,
+        a = 0;return r = e.forEach(function (e) {
+      null != t.units[e] ? a += t.units[e] : "hundred" == e ? a *= 100 : isNaN(e) ? (mag = t.magnitudes[e], n += a * mag, a = 0) : a += e;
+    }), n + a;
+  } };ParZen && (ParZen.formatters.ucf = function (e, r) {
+  return e.charAt(0).toUpperCase() + e.slice(1);
+}, ParZen.formatters.uc = function (e, r) {
+  return e.toUpperCase();
+}, ParZen.formatters.ucr = function (e, r) {
+  return Math.random() > .7 ? e.toUpperCase() : e;
+}, ParZen.formatters.ucw = function (e, r) {
+  return e.replace(/\w\S*/g, function (e) {
+    return e.charAt(0).toUpperCase() + e.substr(1).toLowerCase();
+  });
+}, indefiniteArticle && (ParZen.formatters.an = function (e, r) {
+  return indefiniteArticle(e.split(" ")[0]) + " " + e;
+}), plural && (ParZen.formatters.p = function (e, r) {
+  var t = this.pathMap[r[1]][1].join("."),
+      n = r[r.length - 1];return t.indexOf(n) != -1 && (e = this.data.plurals && this.data.plurals[e] ? this.data.plurals[e] : plural(e)), e;
+}, ParZen.formatters.m = function (e, r) {
+  return plural(e);
+}), ParZen.formatters.hide = function (e, r) {
+  return "";
+}, ParZen.preformatters.random = function (e, r) {
+  var t = r[1].split("-"),
+      n = t[0] || t[1] || 100,
+      a = t[1] || 1,
+      i = Math.min(n, a),
+      o = Math.max(n, a),
+      s = Math.random() * (o - i + 1) + i;if (r[2] && !isNaN(r[2])) {
+    var u = +(1 + Array.apply(null, { length: +r[2] + 1 }).join("0")),
+        f = +("0." + Array.apply(null, Array(+r[2])).map(function (e, t) {
+      return t == +r[2] - 1 ? "1" : "0";
+    }).join(""));return Math.round((+s + f) * u) / u;
+  }return s;
+}, ParZen.preformatters.randomfill = function (e, r) {
+  function t(e, r, t) {
+    var n = 0,
+        a = 9;return Math.floor(Math.random() * (a - n + 1) + n);
+  }return "" == e && r[1] && r[1].length ? e = r[1].replace(/%d/g, t) : e && "#" != e && e.length > 1 && (e = e.replace(/%d/g, t)), e;
+}, ParZen.preformatters.rounddown = function (e, r) {
+  if (isNaN(e)) return e;if (r[1] && !isNaN(r[1])) {
+    var t = +(1 + Array.apply(null, { length: +r[1] + 1 }).join("0")),
+        n = +("0." + Array.apply(null, Array(+r[1])).map(function (e, t) {
+      return t == +r[1] - 1 ? "1" : "0";
+    }).join(""));return Math.floor((+e + n) * t) / t;
+  }return Math.floor(e);
+}, ParZen.preformatters.roundup = function (e, r) {
+  if (isNaN(e)) return e;if (r[1] && !isNaN(r[1])) {
+    var t = +(1 + Array.apply(null, { length: +r[1] + 1 }).join("0")),
+        n = +("0." + Array.apply(null, Array(+r[1])).map(function (e, t) {
+      return t == +r[1] - 1 ? "1" : "0";
+    }).join(""));return Math.ceil((+e + n) * t) / t;
+  }return Math.ceil(e);
+}, ParZen.preformatters.round = function (e, r) {
+  if (isNaN(e)) return e;if (r[1] && !isNaN(r[1])) {
+    var t = +(1 + Array.apply(null, { length: +r[1] + 1 }).join("0")),
+        n = +("0." + Array.apply(null, Array(+r[1])).map(function (e, t) {
+      return t == +r[1] - 1 ? "1" : "0";
+    }).join(""));return Math.round((+e + n) * t) / t;
+  }return Math.round(e);
+}, NtoW && (ParZen.preformatters.asWords = function (e, r) {
+  return isNaN(e) ? e : NtoW.toWords(e);
+}, ParZen.preformatters.asOrdinal = function (e, r) {
+  return isNaN(e) ? e : NtoW.toOrdinal(e);
+}), WtoN && (ParZen.preformatters.asNumber = function (e, r) {
+  var t = WtoN.convert(e);return isNaN(t) || (words = t), words;
+}), ParZen.preformatters.op = function (word, params) {
+  if (isNaN(params[2])) {
+    var fromVar = this.data[params[2]];fromVar || (fromVar = this.userData[params[2]]);
+  }if (fromVar && fromVar.length && (params[2] = fromVar[0]), !isNaN(word) && params[2] && !isNaN(params[2]) && /[\+\*\-\%\^\=\/]/.test(params[1])) {
+    var equation = word + " " + params[1] + " " + params[2];return eval(equation);
+  }return word;
+});
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(132)))
+
+/***/ }),
+/* 304 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var React = __webpack_require__(2);
+var ParZen = __webpack_require__(303);
+
+var Parzen = function (_React$Component) {
+    _inherits(Parzen, _React$Component);
+
+    function Parzen(props) {
+        _classCallCheck(this, Parzen);
+
+        var _this = _possibleConstructorReturn(this, (Parzen.__proto__ || Object.getPrototypeOf(Parzen)).call(this, props));
+
+        _this.state = {
+            messages: []
+        };
+        return _this;
+    }
+
+    _createClass(Parzen, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            var self = this;
+            var json = {
+                "root": ["you {{miss}} {{number}} percent of the {{things}} you {{end}}."],
+                "miss": ["miss", "hit", "take", "throw"],
+                "number": ["20", "40", "60", "80", "100"],
+                "things": ["papers", "turnips", "shots", "chances"],
+                "end": ["never {{action}}", "won't {{action}}", "did {{action}}"],
+                "action": ["plant", "write", "taste", "touch", "open", "{{miss}}"]
+            };
+
+            var pz = new ParZen(json);
+            var sentence = pz.build();
+
+            this.setState(function (state) {
+                state.messages.push(sentence);
+            });
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            return React.createElement(
+                'div',
+                { className: 'container-play' },
+                this.state.messages.map(function (object, i) {
+
+                    return React.createElement(
+                        'span',
+                        { key: i },
+                        ' ',
+                        object,
+                        ' '
+                    );
+                })
+            );
+        }
+    }]);
+
+    return Parzen;
+}(React.Component);
+
+exports.default = Parzen;
 
 /***/ })
 /******/ ]);
