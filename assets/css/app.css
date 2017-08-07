@@ -1029,6 +1029,7 @@ html, body {
   html .container-play, body .container-play {
     padding: 0px 40px; }
     html .container-play .play-thing, body .container-play .play-thing {
+      max-width: 900px;
       border-radius: 9px; }
       html .container-play .play-thing h1, body .container-play .play-thing h1 {
         margin-bottom: 5px; }
@@ -1253,7 +1254,7 @@ html, body {
     display: none; } }
 
 @media (max-width: 830px) {
-  html #app ul, html .app-main ul, body #app ul, body .app-main ul {
+  html #app .container-play .play-thing ul, html .app-main .container-play .play-thing ul, body #app .container-play .play-thing ul, body .app-main .container-play .play-thing ul {
     list-style-type: disc;
     list-style-position: inside;
     -webkit-margin-before: 0em;
