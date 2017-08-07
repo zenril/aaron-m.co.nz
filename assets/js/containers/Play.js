@@ -18,9 +18,13 @@ const PlayThing = (props) => {
                     <a className='git-link code-link' href={props.part.github}>
                         <img src='/assets/img/github.svg' />
                     </a>
+                    {(props.part.npm? 
                     <a className='npm-link code-link' href={props.part.npm}>
                         <img src='/assets/img/npm.svg' />
                     </a>
+                    :
+                    <span></span>
+                    )}
                 </div>
             </div>
             <div className='col-xs-12'>
@@ -94,6 +98,25 @@ export default class Play extends React.Component {
                 ),
                 "github": "https://github.com/zenril/parzen",
                 "npm": "https://www.npmjs.com/package/parzen"
+            },
+             {
+                "name": "scale-ratio",
+                "page": "scale",
+                "decription": (
+                    <div>
+                        CSS to maintain elements aspect ratios across multiple device widths. The elements height will be set based on its width.
+
+<pre>
+    &lt;div class='s-xs-50 s-sm-70 scale'&gt;
+        &lt;div	&gt;
+            &lt;!-- your content goes here -->
+        &lt;/div &gt;
+    &lt;/div &gt;
+</pre>
+                    </div>
+                ),
+                "github": "https://github.com/zenril/scale-ratio",
+                "npm": null
             }
 
         ];

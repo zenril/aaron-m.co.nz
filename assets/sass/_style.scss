@@ -16,10 +16,14 @@ html, body {
 
     .container-play{
         padding:0px 40px;
-        .play-thing{
+        .play-thing {
             max-width: 900px;
             border-radius: 9px;
-            margin-bottom:20px;
+            margin-bottom: 20px;
+            
+            pre {
+                white-space: pre-wrap;
+            }
 
             h1{
                 margin-bottom:5px;

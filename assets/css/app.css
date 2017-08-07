@@ -1032,6 +1032,8 @@ html, body {
       max-width: 900px;
       border-radius: 9px;
       margin-bottom: 20px; }
+      html .container-play .play-thing pre, body .container-play .play-thing pre {
+        white-space: pre-wrap; }
       html .container-play .play-thing h1, body .container-play .play-thing h1 {
         margin-bottom: 5px; }
       html .container-play .play-thing img, body .container-play .play-thing img {
