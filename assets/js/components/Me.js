@@ -2,8 +2,9 @@ var React = require('react');
 import classSet from 'classset';
 
 
-export default React.createClass({
-    render: function () {
+export default class Me extends React.Component{
+    
+    render () {
 
         var classes = classSet({
             'card': true,
@@ -80,6 +81,6 @@ export default React.createClass({
 
         );
     }
-});
+}
 
 

@@ -4,8 +4,8 @@ import Media from 'react-media'
 import classSet from 'classset';
 import Desc from '../components/Desc.js';
 
-export default React.createClass({
-    render: function () {
+export default class Splash extends React.Component {
+    render() {
 
         var classes = classSet({
             'example-img': true,
@@ -13,24 +13,24 @@ export default React.createClass({
 
         return (
 
-            <div className={classes}>              
+            <div className={classes}>
                 <div className='col-sm-12 gallery'>
-                     <Media query={{ minWidth: 830 }}>
+                    <Media query={{ minWidth: 830 }}>
                         {matches => matches ? (
-                            <img src={this.props.obj.src[0] + "/splash.jpg" } />
+                            <img src={this.props.obj.src[0] + "/splash.jpg"} />
                         ) : (
-                            <img src={this.props.obj.src[0] + "/thumb.jpg" } />
+                            <img src={this.props.obj.src[0] + "/thumb.jpg"} />
                         )}
                     </Media>
                 </div>
-                
-                 
+
+
                 <Desc obj={this.props.obj} />
-                
+
 
                 <div className="clearfix"></div>
             </div>
- 
-        ); 
+
+        );
     }
-}); 
+}

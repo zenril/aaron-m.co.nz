@@ -3,9 +3,9 @@ var ReactDOM = require('react-dom');
 
 import Gallery from 'react-grid-gallery';
 import {
-  BrowserRouter as Router,
-  Route,
-  Link
+    BrowserRouter as Router,
+    Route,
+    Link
 } from 'react-router-dom'
 
 import Home from './containers/Home.js';
@@ -16,11 +16,11 @@ import Navigation from './components/Navigation.js';
 import Parzen from './components/play/Parzen.js';
 
 
-var App = React.createClass({
-    render: function () {
-        return ( 
+class App extends React.Component {
+    render() {
+        return (
             <div className='app-main'>
-                <div className="left-panel"> 
+                <div className="left-panel">
                     <div className="branching a">
                         <Branching />
                     </div>
@@ -29,18 +29,17 @@ var App = React.createClass({
                 <Router>
                     <div className="main-window s">
                         <div className="cards">
-                            <Navigation/>
-                            <Route exact path="/" component={Home}/>
-                            <Route exact path="/examples" component={Examples}/>
+                            <Navigation />
+                            <Route exact path="/" component={Home} />
+                            <Route exact path="/examples" component={Examples} />
                             <Route exact path="/play" component={Play} />
                             <Route path="/play/parzen" component={Parzen} />
-
                         </div>
-                    </div> 
-                </Router>                                
+                    </div>
+                </Router>
             </div>
         );
     }
-}); 
+}
 
-ReactDOM.render(<App/>,  document.getElementById("app")); 
+ReactDOM.render(<App />, document.getElementById("app")); 

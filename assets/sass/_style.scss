@@ -17,14 +17,35 @@ html, body {
     .container-play{
         padding:0px 40px;
         .play-thing{
+            border-radius: 9px;
+
+            h1{
+                margin-bottom:5px;
+            }
+            
             img {
                 height: 28px;
             }
         }
     }
 
+
+
     #app, .app-main {
         height:100%;
+
+        .code-links{
+            margin-bottom: 10px;
+            .code-link{
+                margin-right:5px;
+                line-height: auto;
+                &.npm-link{
+                    img{
+                        margin-bottom:-4px;
+                    }
+                }
+            }
+        }
 
         .cv{
             a {

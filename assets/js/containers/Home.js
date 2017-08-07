@@ -1,13 +1,13 @@
 var React = require('react');
 import Me from '../components/Me.js';
 
-export default React.createClass({
-    render: function () {
+export default class Home extends React.Component {
+    render() {
         return (
 
             <div className="container-home">
-                
-                <Me hide={true}/>
+
+                <Me hide={true} />
 
                 <div className="card card1">
                     <ul>
@@ -54,18 +54,15 @@ export default React.createClass({
 
                         <li>HTML</li>
                         <li>CSS, Sass, Less</li>
-                        <li>jQuery</li> 
+                        <li>jQuery</li>
                         <li>Bootstrap</li>
 
                     </ul>
                 </div>
 
-                 <Me hide={false}/>
-
+                <Me hide={false} />
             </div>
 
         );
     }
-});
-
-
+}
