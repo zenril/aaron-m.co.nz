@@ -1030,7 +1030,8 @@ html, body {
     padding: 0px 40px; }
     html .container-play .play-thing, body .container-play .play-thing {
       max-width: 900px;
-      border-radius: 9px; }
+      border-radius: 9px;
+      margin-bottom: 20px; }
       html .container-play .play-thing h1, body .container-play .play-thing h1 {
         margin-bottom: 5px; }
       html .container-play .play-thing img, body .container-play .play-thing img {
@@ -1265,14 +1266,14 @@ html, body {
     margin-left: 10px;
     margin-bottom: 15px; }
   html #app .left-panel, html .app-main .left-panel, body #app .left-panel, body .app-main .left-panel {
-    width: 68px; }
+    width: 48px; }
     html #app .left-panel .branching, html .app-main .left-panel .branching, body #app .left-panel .branching, body .app-main .left-panel .branching {
       height: 100%;
       padding: 0 6px; }
       html #app .left-panel .branching svg, html .app-main .left-panel .branching svg, body #app .left-panel .branching svg, body .app-main .left-panel .branching svg {
-        max-width: 56px; }
+        max-width: 38px; }
   html #app .main-window, html .app-main .main-window, body #app .main-window, body .app-main .main-window {
-    left: 68px; }
+    left: 48px; }
     html #app .main-window .example-img, html .app-main .main-window .example-img, body #app .main-window .example-img, body .app-main .main-window .example-img {
       margin-bottom: 46.25%; }
       html #app .main-window .example-img .description, html .app-main .main-window .example-img .description, body #app .main-window .example-img .description, body .app-main .main-window .example-img .description {
