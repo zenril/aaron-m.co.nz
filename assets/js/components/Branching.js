@@ -1,17 +1,13 @@
 import React from 'react';
 import Vivus from 'vivus';
 import Please from 'pleasejs';
+import Colors from '../components/Colors.js';
 
 export default class Branching extends React.Component {
 
 constructor(props) {
     super(props);
-    var c = Please.make_color({ golden: false, saturation: 1, colors_returned: 10 });
-     this.state = {
-      "color1": c[0] != "#NaN" ? c[0] : c[1],
-      "color2": c[2] != "#NaN" ? c[2] : c[3],
-      "color3": c[4] != "#NaN" ? c[4] : c[5]
-    };
+    this.colors = new Colors();
   }
 
   componentDidMount() {
@@ -29,22 +25,9 @@ constructor(props) {
         viewBox='0 0 38.782765 1392.148'
         {...this.props}
       >
-        <style>
-          {"\
-            .color3,.navigation{\
-              background-color:"+ this.state.color3 + ";\
-            }\
-            .color3t, h2, a, a:active, a:hover , h1{\
-              color:"+ this.state.color3 + ";\
-            }\
-            .border-style-color3{\
-              border:1px solid " + this.state.color3 + ";\
-            }\
-            "}
-        </style>
         <path
           fill='none'
-          stroke={this.state.color3}
+          stroke={this.colors.color3}
           strokeWidth='1.5'
           d='M19.47 899.45c0-2.522.054-5.053.252-7.566.208-2.653.577-5.287 1.212-7.871 1.236-5.034 3.348-9.803 5.5-14.518 2.153-4.716 4.265-9.485 5.501-14.518 1.236-5.034 1.464-10.254 1.464-15.437l-.001-169.49c0-5.184-.227-10.404-1.464-15.437-1.236-5.034-3.348-9.803-5.5-14.518s-4.265-9.485-5.501-14.518c-1.236-5.034-1.464-10.254-1.464-15.437'
           style={{
@@ -59,7 +42,7 @@ constructor(props) {
         />
         <path
           fill='none'
-          stroke={this.state.color1}
+          stroke={this.colors.color1}
           strokeWidth='1.5'
           d='M5.47 1392.13V899.44c0-5.184.227-10.404 1.464-15.437 1.236-5.034 3.348-9.802 5.5-14.518 2.153-4.715 4.265-9.484 5.501-14.518 1.236-5.034 1.464-10.254 1.464-15.437-.004-80.393.003-319.07.003-399.47'
         />
@@ -68,7 +51,7 @@ constructor(props) {
         >
           <path
             fill='none'
-            stroke={this.state.color2}
+            stroke={this.colors.color2}
             strokeWidth='1.5'
             d='M-562.49-209.93V630.2c0 5.184.227 10.404 1.464 15.437 1.236 5.034 3.348 9.802 5.5 14.518 2.152 4.716 4.265 9.484 5.501 14.518 1.236 5.034 1.464 10.254 1.464 15.437v53.023'
             style={{
@@ -89,7 +72,7 @@ constructor(props) {
               cx='-534.43'
               cy='458.4'
               r='5.253'
-              fill={this.state.color3}
+              fill={this.colors.color3}
               style={{
                 colorRendering: 'auto',
                 color: '#000',
@@ -105,7 +88,7 @@ constructor(props) {
               cx='-534.5'
               cy='515.46'
               r='5.253'
-              fill={this.state.color3}
+              fill={this.colors.color3}
               style={{
                 colorRendering: 'auto',
                 color: '#000',
@@ -121,7 +104,7 @@ constructor(props) {
               cx='-548.6'
               cy='572.47'
               r='5.253'
-              fill={this.state.color1}
+              fill={this.colors.color1}
               style={{
                 colorRendering: 'auto',
                 color: '#000',
@@ -137,7 +120,7 @@ constructor(props) {
               cx='-562.71'
               cy='629.43'
               r='5.253'
-              fill={this.state.color2}
+              fill={this.colors.color2}
               style={{
                 colorRendering: 'auto',
                 color: '#000',
@@ -153,7 +136,7 @@ constructor(props) {
               cx='-548.57'
               cy='686.4'
               r='5.253'
-              fill={this.state.color2}
+              fill={this.colors.color2}
               style={{
                 colorRendering: 'auto',
                 color: '#000',
@@ -169,7 +152,7 @@ constructor(props) {
               cx='-534.74'
               cy='458.68'
               r='5.253'
-              fill={this.state.color3}
+              fill={this.colors.color3}
               style={{
                 colorRendering: 'auto',
                 color: '#000',
@@ -183,7 +166,7 @@ constructor(props) {
           </g>
           <path
             fill='none'
-            stroke={this.state.color2}
+            stroke={this.colors.color2}
             strokeWidth='1.5'
             d='M-562.55 349.55c0-2.522.054-5.053.252-7.566.208-2.653.577-5.287 1.212-7.871 1.236-5.034 3.348-9.803 5.5-14.518 2.153-4.716 4.265-9.485 5.501-14.518 1.236-5.034 1.464-10.254 1.464-15.437'
             style={{
@@ -201,7 +184,7 @@ constructor(props) {
             cx='-548.71'
             cy='401.4'
             r='5.253'
-            fill={this.state.color1}
+            fill={this.colors.color1}
             fillRule='evenodd'
             style={{
               colorRendering: 'auto',
@@ -218,7 +201,7 @@ constructor(props) {
             cx='-562.5'
             cy='354.68'
             r='5.253'
-            fill={this.state.color2}
+            fill={this.colors.color2}
             fillRule='evenodd'
             style={{
               colorRendering: 'auto',
@@ -232,7 +215,7 @@ constructor(props) {
           />
           <path
             fill='none'
-            stroke={this.state.color1}
+            stroke={this.colors.color1}
             strokeWidth='1.5'
             d='M-562.55 172.97c0 2.522.054 5.053.252 7.566.208 2.653.577 5.287 1.212 7.871 1.236 5.034 3.348 9.803 5.5 14.518 2.153 4.716 4.265 9.484 5.501 14.518 1.236 5.034 1.464 10.254 1.464 15.437'
             style={{
@@ -247,7 +230,7 @@ constructor(props) {
           />
           <path
             fill='none'
-            stroke={this.state.color2}
+            stroke={this.colors.color2}
             strokeWidth='1.5'
             d='M-562.55 801.37c0-2.522.054-5.053.252-7.566.208-2.653.577-5.287 1.212-7.871 1.236-5.034 3.348-9.803 5.5-14.518 2.153-4.716 4.265-9.485 5.501-14.518 1.236-5.034 1.464-10.254 1.464-15.437'
             style={{
@@ -265,7 +248,7 @@ constructor(props) {
             cx='-548.64'
             cy='743.5'
             r='5.253'
-            fill={this.state.color2}
+            fill={this.colors.color2}
             fillRule='evenodd'
             style={{
               colorRendering: 'auto',
@@ -278,7 +261,7 @@ constructor(props) {
             }}
           />
           <g
-            fill={this.state.color1}
+            fill={this.colors.color1}
             fillRule='evenodd'
           >
             <circle

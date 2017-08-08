@@ -14,12 +14,15 @@ import Examples from './containers/Examples.js';
 import Branching from './components/Branching.js';
 import Navigation from './components/Navigation.js';
 import Parzen from './components/play/Parzen.js';
+import Colors from './components/Colors.js';
 
 
 class App extends React.Component {
     render() {
+        const ColorStyle = new Colors().render();
         return (
             <div className='app-main'>
+                <ColorStyle />
                 <div className="left-panel">
                     <div className="branching a">
                         <Branching />
