@@ -1191,14 +1191,6 @@ html, body {
   left: 0;
   width: 100%;
   z-index: 2; }
-  .navigation ul {
-    list-style: none;
-    margin: 0;
-    -webkit-margin-before: 0em;
-    -webkit-margin-after: 0em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
-    -webkit-padding-start: 0px; }
   .navigation .menu {
     position: relative;
     z-index: -1;
@@ -1251,6 +1243,19 @@ html, body {
     font-weight: 500; }
     .navigation a:hover, .navigation a:visited:hover, .navigation a:active:hover, .navigation a:hover:hover, .navigation a:focus:hover {
       background: rgba(0, 0, 0, 0.2); }
+  .navigation ul {
+    list-style: none;
+    margin: 0;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px; }
+    .navigation ul .menu li {
+      width: 100%;
+      display: block; }
+      .navigation ul .menu li a {
+        display: block; }
 
 @media (max-width: 768px) {
   .line {

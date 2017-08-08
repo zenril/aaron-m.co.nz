@@ -7,16 +7,8 @@
     left:0;width: 100%;
     z-index: 2;
 
-    ul{
-        list-style: none;
-        margin:0;
-        -webkit-margin-before: 0em;
-        -webkit-margin-after: 0em;
-        -webkit-margin-start: 0px;
-        -webkit-margin-end: 0px;
-        -webkit-padding-start: 0px;
-    }
-    
+   
+     
     .menu{
         position: relative;
         z-index: -1;
@@ -103,4 +95,27 @@
             background: rgba(0,0,0,0.2);
         }
     }
+
+    
+     ul{
+        list-style: none;
+        margin:0;
+        -webkit-margin-before: 0em;
+        -webkit-margin-after: 0em;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+        -webkit-padding-start: 0px;
+        .menu{
+            li{
+                width: 100%;
+                display: block;
+                
+                a{
+                    display: block;
+                }
+            }
+        }
+    }
+
+
 }

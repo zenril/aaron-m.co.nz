@@ -104,16 +104,16 @@ export default class Play extends React.Component {
                 "page": "scale",
                 "decription": (
                     <div>
-                        CSS to maintain elements aspect ratios across multiple device widths. The elements height will be set based on its width.
+                        CSS to maintain elements aspect ratios across multiple device widths. The height will be set based on a % of its width.
 
-<pre>
-    &lt;div class='s-xs-50 s-sm-70 scale'&gt;
-        &lt;div	&gt;
-            &lt;!-- your content goes here -->
-        &lt;/div &gt;
-    &lt;/div &gt;
-</pre>
-                    </div>
+<pre><code>
+{`<div class='s-xs-50 s-sm-70 scale'>
+    <div>
+        <!-- your content goes here --> 
+    </div>
+</div>
+`}</code></pre> 
+                    </div> 
                 ),
                 "github": "https://github.com/zenril/scale-ratio",
                 "npm": null
