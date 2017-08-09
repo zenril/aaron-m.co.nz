@@ -1,7 +1,7 @@
 import React from 'react';
 import Vivus from 'vivus';
 import Please from 'pleasejs';
-
+import col from 'color';
 
 let instance = null;
 
@@ -13,7 +13,16 @@ constructor(props) {
         instance = this;
     }
 
-    var c = Please.make_color({ golden: false, saturation: 1, colors_returned: 20 });
+    var c = Please.make_color(
+      { 
+        golden: false,
+        saturation: 1,
+        colors_returned: 20 
+      }, 
+      {
+        scheme_type: 'complementary'
+      }
+    );
 
     this.colors = [];
     c.forEach((element) => {
@@ -26,6 +35,7 @@ constructor(props) {
     this.color2 = this.colors[1];
     this.color3 = this.colors[2];
 
+    this.light3 = col( this.color3 ).mix(col("white"), 0.8);
 
     return instance;
   }
@@ -43,6 +53,11 @@ constructor(props) {
             }
             .border-style-color3{
               border:1px solid ` + self.color3 + `;
+            }
+
+            code{
+              background:` + self.light3 + `;
+              border-left:5px solid ` + self.color3 + `;
             }
            `}
         </style>
