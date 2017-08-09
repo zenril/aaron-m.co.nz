@@ -5,7 +5,8 @@ import Gallery from 'react-grid-gallery';
 import {
     BrowserRouter as Router,
     Route,
-    Link
+    Link,
+    Switch
 } from 'react-router-dom'
 
 import Home from './containers/Home.js';
@@ -14,6 +15,7 @@ import Examples from './containers/Examples.js';
 import Branching from './components/Branching.js';
 import Navigation from './components/Navigation.js';
 import Parzen from './components/play/Parzen.js';
+import Scale from './components/play/Scale.js';
 import Colors from './components/Colors.js';
 
 
@@ -33,13 +35,18 @@ class App extends React.Component {
                     <div className="main-window s">
                         <div className="cards">
                             <Navigation />
+
                             <Route exact path="/" component={Home} />
                             <Route exact path="/examples" component={Examples} />
-                            <Route exact path="/play" component={Play} />
+                            <Route exact path="/play" component={Play} />                               
                             <Route path="/play/parzen" component={Parzen} />
-                        </div>
+                            <Route path="/play/scale" component={Scale} />                             
+                            
+                        </div> 
                     </div>
                 </Router>
+
+                
             </div>
         );
     }

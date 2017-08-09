@@ -11,9 +11,17 @@ import Splash from '../components/Splash.js';
 const PlayThing = (props) => {
 
     return (
-        <div className="play-thing border-style-color3 row">
+        <div className="play-thing row">
             <div className='col-xs-12'>
-                <h1>{props.part.name}</h1>
+                {(props.part.page? 
+                    <h1>
+                        <Link to={"/play/" + props.part.page }>
+                            {props.part.name}
+                        </Link>
+                    </h1>
+                :
+                    <h1>{props.part.name}</h1>
+                )}
                 <div className='code-links'>
                     <a className='git-link code-link' href={props.part.github}>
                         <img src='/assets/img/github.svg' />
@@ -71,7 +79,7 @@ export default class Play extends React.Component {
         var playthings = [
             {
                 "name": "ParZen",
-                "page": "parzen",
+                "page": null,
                 "decription": (
                     <div>
                         <strong>A library for generating random but formatted sets of words.</strong>
@@ -116,7 +124,7 @@ export default class Play extends React.Component {
                     </div> 
                 ),
                 "github": "https://github.com/zenril/scale-ratio",
-                "npm": null
+                "npm": "https://www.npmjs.com/package/scale-ratio"
             }
 
         ];

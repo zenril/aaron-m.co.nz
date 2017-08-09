@@ -2,13 +2,15 @@
 
 @import './bower_components/bootstrap-sass-grid/sass/bootstrap-sass-grid';
 
+@import './node_modules/scale-ratio/dist/css/scale-ratio.min';
+
 @import '_functions';
 
 @import '_variables';
 
 @import '_animations';
 
-@import '_style';
+@import '_style'; 
 
 @import '_navigation';
 
