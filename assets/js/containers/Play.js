@@ -79,7 +79,7 @@ export default class Play extends React.Component {
         var playthings = [
             {
                 "name": "ParZen",
-                "page": null,
+                "page": "parzen",
                 "decription": (
                     <div>
                         <strong>A library for generating random but formatted sets of words.</strong>
