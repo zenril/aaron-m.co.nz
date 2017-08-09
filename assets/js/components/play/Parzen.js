@@ -56,18 +56,32 @@ export default class Parzen extends React.Component {
         "amber",
         "amethyst"
     ],
+
     "animal": {
         "small": [
             "fox",
             "dog",
             "cat",
             "snake",
-            "ant"
+            "ant",
+            "mouse",
+            "lemar",
+            "fly",
+            "quokka",
+            "goose",
+            "capybara"
         ],
+        
         "big": [
             "baboon",
             "hippo",
-            "elephant"
+            "elephant",
+            "zebra",
+            "giraffe",
+            "moose",
+            "cow",
+            "bull",
+            "whale"
         ]
     },
     "action": [
