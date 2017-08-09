@@ -78,6 +78,7 @@ export default class Play extends React.Component {
 
         var playthings = [
             {
+
                 "name": "ParZen",
                 "page": "parzen",
                 "decription": (
@@ -106,7 +107,8 @@ export default class Play extends React.Component {
                 ),
                 "github": "https://github.com/zenril/parzen",
                 "npm": "https://www.npmjs.com/package/parzen"
-            },
+            }
+            ,
              {
                 "name": "scale-ratio",
                 "page": "scale",
