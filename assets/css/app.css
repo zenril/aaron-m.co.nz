@@ -1495,6 +1495,13 @@ html, body {
     margin-top: 100px; }
   html .container-play, body .container-play {
     padding: 0px 40px; }
+    html .container-play textarea, body .container-play textarea {
+      display: block;
+      width: 100%;
+      min-height: 300px; }
+    html .container-play .parzen-line, body .container-play .parzen-line {
+      border-bottom: 1px solid #d4d4d4;
+      padding: 5px; }
     html .container-play .play-thing, body .container-play .play-thing {
       max-width: 900px;
       border-bottom: 1px solid #d4d4d4;

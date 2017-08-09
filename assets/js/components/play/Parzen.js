@@ -1,44 +1,168 @@
 var React = require('react');
 var ParZen = require('parzen');
 
+
 export default class Parzen extends React.Component {
 
     constructor(props) {
         super(props);
+
+         this.words = {
+    "root": [
+        "the {{adj}} {{color}} {{animal}} {{action}} the {{adj}} {{animal}}",
+        "I saw {{a1:animal|an}} it was {{adj|an|like:a1}} {{color}} {{a1}}",
+        "{{word:pattern}}{{word|reverse}}"
+    ],
+    "adj": {
+        "big": [
+            "substantial",
+            "considerable",
+            "great",
+            "huge",
+            "immense",
+            "enormous",
+            "extensive",
+            "colossal",
+            "massive",
+            "mammoth",
+            "vast",
+            "prodigious",
+            "tremendous"
+        ],
+        "small": [
+            "slight",
+            "minor",
+            "unimportant",
+            "trifling",
+            "trivial",
+            "insignificant",
+            "inconsequential",
+            "inappreciable",
+            "inconsiderable",
+            "negligible",
+            "nugatory",
+            "paltry"
+        ]
+    },
+    "color": [
+        "red",
+        "candy",
+        "lightening",
+        "brown",
+        "white",
+        "purple",
+        "peach",
+        "almond",
+        "amber",
+        "amethyst"
+    ],
+    "animal": {
+        "small": [
+            "fox",
+            "dog",
+            "cat",
+            "snake",
+            "ant"
+        ],
+        "big": [
+            "baboon",
+            "hippo",
+            "elephant"
+        ]
+    },
+    "action": [
+        "jumped over",
+        "ducked under",
+        "fell into",
+        "touched",
+        "threw",
+        "dragged"
+    ],
+    "pattern": [
+        "{{bit}}{{bit}}{{bit}}",
+        "{{bit}}<>{{bit}}",
+        "{{bit}}{{bit}}{{bit}}{{bit}}{{bit}}{{bit}}"
+    ],
+    "bit": [
+        "-",
+        ".",
+        ",",
+        "[",
+        "{",
+        "}",
+        "+",
+        "=",
+        "~",
+        "!",
+        "_",
+        "/",
+        "@",
+        "#",
+        "%",
+        " ",
+        " ",
+        " ",
+        " ",
+        " ",
+        "&"
+    ]
+};
+
+
         this.state = {
-            messages: []
+            messages: [],
+            list : JSON.stringify(this.words,null, 4)
         };
+
+        this.handleKeyUp = this.handleKeyUp.bind(this);
     }
 
     componentDidMount() {
         var self = this;
-        var json = {
-            "root": [
-                "you {{miss}} {{number}} percent of the {{things}} you {{end}}."
-            ],
-            "miss": ["miss", "hit", "take", "throw"],
-            "number": ["20", "40", "60", "80", "100"],
-            "things": ["papers", "turnips", "shots", "chances"],
-            "end": ["never {{action}}", "won't {{action}}", "did {{action}}"],
-            "action": ["plant", "write", "taste", "touch", "open", "{{miss}}"]
-        };
-
-        var pz = new ParZen(json);
+        var pz = new ParZen(this.words);
         var sentence = pz.build();
+        this.setState(state => 
+            ({
+                messages:[pz.build(),pz.build(),pz.build(),pz.build(),pz.build(),pz.build(),pz.build(),pz.build()]
+            })
+        );
+    }
 
-        this.setState((state) => {state.messages.push(sentence);});
 
+    handleKeyUp(e) {
+        let str = e.target.value;
+        var json = JSON.parse(str);
+        var pz = new ParZen(json);
+
+        this.setState(prevState => ({
+            list: str,
+            messages : [pz.build(),pz.build(),pz.build(),pz.build(),pz.build(),pz.build(),pz.build(),pz.build()]
+        }));
     }
 
     render() { 
         return (
 
             <div className="container-play">
-                {this.state.messages.map(function(object, i){
+                <h1>Modify the JSON</h1>
+                <h2>Just keep the "root" node</h2>
+
+                <div className='col-sm-8'>
+                    <h3>Input</h3>
+                <textarea onKeyUp={this.handleKeyUp}>
+                    {
+                        this.state.list
+                    }
+                </textarea>
+                </div>
+                <div className='col-sm-4'>
+                    <h3>Output</h3>
+                    {this.state.messages.map(function(object, i){
+                            
+                        return <div key={i} className='parzen-line'> {object} </div>;
                         
-                    return <span key={i} > {object} </span>;
-                    
-                })}
+                    })}
+                </div>
             </div>
 
         );

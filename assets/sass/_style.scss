@@ -17,11 +17,24 @@ html, body {
     .container-play{
         padding:0px 40px;
         
+        textarea{
+            display: block;
+            width:100%;
+            min-height: 300px;
+        }
+        
+        .parzen-line{
+            border-bottom:1px solid $border;
+            padding:5px;
+        }
+
         .play-thing {
             max-width: 900px;
             border-bottom:1px solid $border;
             margin-bottom: 20px;
             
+
+
             pre {
                 white-space: pre-wrap;
                 code{
