@@ -114,7 +114,7 @@ export default class Play extends React.Component {
                 "page": null,
                 "decription": (
                     <div>
-                        React twitch chat overlay. Visiting the following url <a href='http://twitchchat.aaron-m.co.nz/chat/dota2ti'>http://twitchchat.aaron-m.co.nz/chat/dota2ti</a> may provide text chat if this channel is online
+                        React twitch chat overlay. Visiting the following url <a href='http://twitchchat.aaron-m.co.nz/chat/loadingreadyrun'>http://twitchchat.aaron-m.co.nz/chat/loadingreadyrun</a> may provide text chat if this channel is online
 
                         <h2>Or</h2>
 
