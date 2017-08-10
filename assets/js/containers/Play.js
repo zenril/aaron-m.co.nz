@@ -109,6 +109,25 @@ export default class Play extends React.Component {
                 "npm": "https://www.npmjs.com/package/parzen"
             }
             ,
+            {
+                "name": "OBS Twitch chat html overlay",
+                "page": null,
+                "decription": (
+                    <div>
+                        React twitch chat overlay. Visiting the following url <a href='http://twitchchat.aaron-m.co.nz/chat/dota2ti'>http://twitchchat.aaron-m.co.nz/chat/dota2ti</a> may provide text chat if this channel is online
+
+                        <h2>Or</h2>
+
+<pre><code>
+{`//replace ':name' with twitch username
+http://twitchchat.aaron-m.co.nz/chat/:name
+`}</code></pre> 
+                    </div> 
+                ),
+                "github": "https://github.com/zenril/twitchwidget",
+                "npm": null
+            }
+            ,
              {
                 "name": "scale-ratio",
                 "page": "scale",
