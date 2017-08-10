@@ -9,9 +9,8 @@ export default class Parzen extends React.Component {
 
          this.words = {
     "root": [
-        "the {{adj}} {{color}} {{animal}} {{action}} the {{adj}} {{animal}}",
-        "I saw {{a1:animal|an}} it was {{adj|an|like:a1}} {{color}} {{a1}}",
-        "{{word:pattern}}{{word|reverse}}"
+        "The {{adj}} {{color}} {{animal}} {{action}} the {{adj}} {{animal}}.",
+        "I saw {{a1:animal|an}}. It was {{adj|an|like:a1}} {{color}} {{a1}}."
     ],
     "adj": {
         "big": [
@@ -56,18 +55,32 @@ export default class Parzen extends React.Component {
         "amber",
         "amethyst"
     ],
+
     "animal": {
         "small": [
             "fox",
             "dog",
             "cat",
             "snake",
-            "ant"
+            "ant",
+            "mouse",
+            "lemar",
+            "fly",
+            "quokka",
+            "goose",
+            "capybara"
         ],
+
         "big": [
             "baboon",
             "hippo",
-            "elephant"
+            "elephant",
+            "zebra",
+            "giraffe",
+            "moose",
+            "cow",
+            "bull",
+            "whale"
         ]
     },
     "action": [
