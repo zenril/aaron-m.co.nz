@@ -57,6 +57,9 @@ constructor(props) {
 
             code{
               background:` + self.light3 + `;
+            }
+
+            pre code {
               border-left:5px solid ` + self.color3 + `;
             }
            `}

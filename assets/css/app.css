@@ -1493,6 +1493,11 @@ html, body {
     -moz-osx-font-smoothing: grayscale; }
   html .example-container, html .container-play, body .example-container, body .container-play {
     margin-top: 100px; }
+  html pre, body pre {
+    white-space: pre-wrap; }
+    html pre code, body pre code {
+      display: block;
+      padding: 15px; }
   html .container-play, body .container-play {
     padding: 0px 40px; }
     html .container-play textarea, body .container-play textarea {
@@ -1506,11 +1511,6 @@ html, body {
       max-width: 900px;
       border-bottom: 1px solid #d4d4d4;
       margin-bottom: 20px; }
-      html .container-play .play-thing pre, body .container-play .play-thing pre {
-        white-space: pre-wrap; }
-        html .container-play .play-thing pre code, body .container-play .play-thing pre code {
-          display: block;
-          padding: 15px; }
       html .container-play .play-thing h1, body .container-play .play-thing h1 {
         margin-bottom: 5px; }
       html .container-play .play-thing img, body .container-play .play-thing img {

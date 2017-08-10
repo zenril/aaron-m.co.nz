@@ -121,8 +121,8 @@ export default class Play extends React.Component {
 <pre><code>
 {`//replace ':name' with twitch username
 http://twitchchat.aaron-m.co.nz/chat/:name
-`}</code></pre> 
-                    </div> 
+`}</code></pre>
+                    </div>
                 ),
                 "github": "https://github.com/zenril/twitchwidget",
                 "npm": null

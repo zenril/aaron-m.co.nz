@@ -1,6 +1,9 @@
 var React = require('react');
 var ParZen = require('parzen');
 
+import axios from 'axios';
+import ReactMarkdown from 'react-markdown';
+
 
 export default class Parzen extends React.Component {
 
@@ -124,7 +127,8 @@ export default class Parzen extends React.Component {
 
         this.state = {
             messages: [],
-            list : JSON.stringify(this.words,null, 4)
+            list : JSON.stringify(this.words,null, 4),
+            body : "# This is a header\n\nAnd this is a paragraph" 
         };
 
         this.handleKeyUp = this.handleKeyUp.bind(this);
@@ -139,6 +143,16 @@ export default class Parzen extends React.Component {
                 messages:[pz.build(),pz.build(),pz.build(),pz.build(),pz.build(),pz.build(),pz.build(),pz.build()]
             })
         );
+
+
+         axios.get("https://raw.githubusercontent.com/zenril/parzen/master/README.md").then(res => {
+           
+            this.setState(state => 
+                ({
+                    body : res.data 
+                })
+            );
+        });
     }
 
 
@@ -162,11 +176,11 @@ export default class Parzen extends React.Component {
 
                 <div className='col-sm-8'>
                     <h3>Input</h3>
-                <textarea onKeyUp={this.handleKeyUp}>
-                    {
-                        this.state.list
-                    }
-                </textarea>
+                    <textarea onKeyUp={this.handleKeyUp}>
+                        {
+                            this.state.list
+                        }
+                    </textarea>
                 </div>
                 <div className='col-sm-4'>
                     <h3>Output</h3>
@@ -176,6 +190,11 @@ export default class Parzen extends React.Component {
                         
                     })}
                 </div>
+                
+                <div className='col-sm-12'>
+                    <ReactMarkdown source={this.state.body} />
+                </div>
+
             </div>
 
         );
