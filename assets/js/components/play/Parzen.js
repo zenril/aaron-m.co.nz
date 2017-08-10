@@ -128,7 +128,7 @@ export default class Parzen extends React.Component {
         this.state = {
             messages: [],
             list : JSON.stringify(this.words,null, 4),
-            body : "# This is a header\n\nAnd this is a paragraph" 
+            body : "" 
         };
 
         this.handleKeyUp = this.handleKeyUp.bind(this);
