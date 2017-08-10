@@ -73,7 +73,7 @@ export default class Play extends React.Component {
         this.setState((state) => { state.messages.push(sentence); });
 
     }
-
+    
     render() {
 
         var playthings = [
