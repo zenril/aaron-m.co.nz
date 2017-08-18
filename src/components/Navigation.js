@@ -5,31 +5,37 @@ import {
     Link
 } from 'react-router-dom'
 
-class Navigation extends React.Component {
+class Navigation extends React.Component 
+{
 
-    constructor(props) {
+    constructor(props) 
+    {
         super(props);
         this.state = { isToggleOn: false };
         this.handleClick = this.handleClick.bind(this);
         this.handleHoverOff = this.handleHoverOff.bind(this);
     }
 
-    handleClick(e) {
+    handleClick(e) 
+    {
         e.preventDefault();
         this.setState(prevState => ({
             isToggleOn: !prevState.isToggleOn
         }));
     }
 
-    handleHoverOff(e) {
+    handleHoverOff(e) 
+    {
         e.preventDefault();
         this.setState(prevState => ({
             isToggleOn: false
         }));
     }
 
-    render() {
-        return (
+    render() 
+    {
+        return 
+        (
             <div className='navigation' onMouseLeave={this.handleHoverOff}>
 
                 <ul>
@@ -51,7 +57,7 @@ class Navigation extends React.Component {
                                     <Link to="/play">Play</Link>
                                 </li>
                                 <li>
-                                    <a className='pull-right-left' target="_blank" href='/assets/docs/aaron-meredith-cv.pdf'>View my CV</a>
+                                    <a className='pull-right-left' target="_blank" href='/docs/aaron-meredith-cv.pdf'>View my CV</a>
                                 </li>
 
                             </ul>

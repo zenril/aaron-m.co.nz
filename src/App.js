@@ -1,5 +1,5 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 import Gallery from 'react-grid-gallery';
 import {
@@ -9,14 +9,10 @@ import {
     Switch
 } from 'react-router-dom'
 
-import Home from './containers/Home.js';
-import Play from './containers/Play.js';
-import Examples from './containers/Examples.js';
-import Branching from './components/Branching.js';
-import Navigation from './components/Navigation.js';
-import Parzen from './components/play/Parzen.js';
-import Scale from './components/play/Scale.js';
-import Colors from './components/Colors.js';
+import SideBar from './components/SideBar';
+import Navigation from './components/Navigation';
+import Colors from './components/Colors';
+import {Home, Examples, Play, Parzen, Scale} from './containers'
 
 
 class App extends React.Component {
@@ -27,7 +23,7 @@ class App extends React.Component {
                 <ColorStyle />
                 <div className="left-panel">
                     <div className="branching a">
-                        <Branching />
+                        <SideBar />
                     </div>
                 </div>
 
@@ -35,7 +31,7 @@ class App extends React.Component {
                     <div className="main-window s">
                         <div className="cards">
                             <Navigation />
-
+                        
                             <Route exact path="/" component={Home} />
                             <Route exact path="/examples" component={Examples} />
                             <Route exact path="/play" component={Play} />                               

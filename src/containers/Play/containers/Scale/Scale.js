@@ -1,19 +1,22 @@
-var React = require('react');
+import React from 'react';
 import axios from 'axios';
 import ReactMarkdown from 'react-markdown';
 
-export default class Scale extends React.Component {
+export default class Scale extends React.Component 
+{
 
-    constructor(props) {
+    constructor(props) 
+    {
         super(props);
         this.state = {
             body : "" 
         };
     }    
 
-    componentDidMount() {
-        
-         axios.get("https://raw.githubusercontent.com/zenril/scale-ratio/master/README.md").then(res => {           
+    componentDidMount() 
+    {
+         axios.get("https://raw.githubusercontent.com/zenril/scale-ratio/master/README.md").then(res => 
+         {           
             this.setState(state => 
                 ({
                     body : res.data 
@@ -24,9 +27,10 @@ export default class Scale extends React.Component {
     }
 
 
-    render() { 
-        return (
-
+    render() 
+    { 
+        return 
+        (
             <div className="container-play">
                 <div className='s-xs-60 s-sm-40 s-md-30 s-lg-20 scale'>
                     <div className='border-style-color3'>
@@ -52,11 +56,8 @@ export default class Scale extends React.Component {
                 <div className='col-sm-12'>
                    
                 </div>
-
             </div>
 
         );
     }
 }
-
-

@@ -1,12 +1,14 @@
-var React = require('react');
-import Me from '../components/Me.js';
+import React from 'react';
+import Me from './components/Me';
 
-export default class Home extends React.Component {
-    render() {
-        return (
+export default class Home extends React.Component 
+{
+    render() 
+    {
+        return 
+        (
 
             <div className="container-home">
-
                 <Me hide={true} />
 
                 <div className="card card1">

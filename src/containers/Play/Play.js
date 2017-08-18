@@ -1,11 +1,10 @@
-var React = require('react');
-var ParZen = require('parzen');
+import React from 'react';
+import ParZen from 'parzen';
 import {
     BrowserRouter as Router,
     Route,
     Link
 } from 'react-router-dom';
-import Splash from '../components/Splash.js';
 
 
 const PlayThing = (props) => {
@@ -24,11 +23,11 @@ const PlayThing = (props) => {
                 )}
                 <div className='code-links'>
                     <a className='git-link code-link' href={props.part.github}>
-                        <img src='/assets/img/github.svg' />
+                        <img src='/img/github.svg' />
                     </a>
                     {(props.part.npm? 
                     <a className='npm-link code-link' href={props.part.npm}>
-                        <img src='/assets/img/npm.svg' />
+                        <img src='/img/npm.svg' />
                     </a>
                     :
                     <span></span>
@@ -107,8 +106,7 @@ export default class Play extends React.Component {
                 ),
                 "github": "https://github.com/zenril/parzen",
                 "npm": "https://www.npmjs.com/package/parzen"
-            }
-            ,
+            },
             {
                 "name": "OBS Twitch chat html overlay",
                 "page": null,

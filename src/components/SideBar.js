@@ -1,11 +1,13 @@
 import React from 'react';
 import Vivus from 'vivus';
 import Please from 'pleasejs';
-import Colors from '../components/Colors.js';
+import Colors from './Colors';
 
-export default class Branching extends React.Component {
+export default class Branching extends React.Component 
+{
 
-constructor(props) {
+  constructor(props) 
+  {
     super(props);
     this.colors = new Colors();
   }
