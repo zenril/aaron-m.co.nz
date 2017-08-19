@@ -40,14 +40,13 @@ export default class Examples extends React.Component
                 desc: (<span className="color3">Using Laravel, I replicated the native app using all the data from the same API</span>),
             }];
 
-        return 
-        (
+        return (
 
             <div className="example-container">
 
                 {images.map(function (object, i) {
 
-                    return <Preview obj={object} key={i} />;
+                    return <Preview obj={object} key={i} />; 
 
                 })}
 

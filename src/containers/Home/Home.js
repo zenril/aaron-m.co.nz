@@ -5,9 +5,7 @@ export default class Home extends React.Component
 {
     render() 
     {
-        return 
-        (
-
+        return (
             <div className="container-home">
                 <Me hide={true} />
 

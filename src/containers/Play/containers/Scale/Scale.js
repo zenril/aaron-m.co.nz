@@ -29,8 +29,7 @@ export default class Scale extends React.Component
 
     render() 
     { 
-        return 
-        (
+        return (
             <div className="container-play">
                 <div className='s-xs-60 s-sm-40 s-md-30 s-lg-20 scale'>
                     <div className='border-style-color3'>

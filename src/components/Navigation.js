@@ -34,8 +34,7 @@ class Navigation extends React.Component
 
     render() 
     {
-        return 
-        (
+        return (
             <div className='navigation' onMouseLeave={this.handleHoverOff}>
 
                 <ul>

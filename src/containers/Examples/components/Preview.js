@@ -10,20 +10,19 @@ const Desc = (props) =>
         'col-sm-12': true
     });
 
-    return 
-    (
+    return (
 
         <div className={classes}>
             <div className=''>
-                <h1 className="color3">{this.props.obj.name}</h1>
+                <h1 className="color3">{props.obj.name}</h1>
             </div>
             <div className=''>
 
-                <a className="color3" href={this.props.obj.link}>{this.props.obj.link}</a>
-                <h3 className="color3">Built with: {this.props.obj.built}</h3>
+                <a className="color3" href={props.obj.link}>{props.obj.link}</a>
+                <h3 className="color3">Built with: {props.obj.built}</h3>
             </div>
             <div className=' desco'>
-                {this.props.obj.desc}
+                {props.obj.desc}
             </div>
         </div>
 
@@ -41,8 +40,7 @@ export default class Preview extends React.Component
             'example-img': true,
         });
 
-        return 
-        (
+        return (
 
             <div className={classes}>
                 <div className='col-sm-12 gallery'>
