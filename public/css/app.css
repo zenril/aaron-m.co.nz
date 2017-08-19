@@ -1498,6 +1498,10 @@ html, body {
     html pre code, body pre code {
       display: block;
       padding: 15px; }
+  html table tr td, body table tr td {
+    padding: 8px;
+    margin: 2px;
+    border-spacing: 2px; }
   html .container-play, body .container-play {
     padding: 0px 40px; }
     html .container-play textarea, body .container-play textarea {

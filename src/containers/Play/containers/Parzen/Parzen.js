@@ -1,15 +1,17 @@
 import React from 'react';
 import ParZen from 'parzen';
 import axios from 'axios';
-import ReactMarkdown from 'react-markdown';
+import Markdown from 'react-remarkable';
 
 
-export default class Parzen extends React.Component {
+export default class Parzen extends React.Component 
+{
 
-    constructor(props) {
+    constructor(props) 
+    {
         super(props);
-
-         this.words = {
+        this.samples = 10;
+        this.words = {
             "root": [
                 "The {{adj}} {{color}} {{animal}} {{action}} the {{adj}} {{animal}}.",
                 "I saw {{a1:animal|an}}. It was {{adj|an|like:a1}} {{color}} {{a1}}."
@@ -125,7 +127,8 @@ export default class Parzen extends React.Component {
 
 
         this.state = {
-            messages: [],
+            messages: [
+            ],
             list : JSON.stringify(this.words,null, 4),
             body : "" 
         };
@@ -133,18 +136,26 @@ export default class Parzen extends React.Component {
         this.handleKeyUp = this.handleKeyUp.bind(this);
     }
 
-    componentDidMount() {
-        var self = this;
+    componentDidMount() 
+    {
         var pz = new ParZen(this.words);
-        var sentence = pz.build();
-        this.setState(state => 
+
+        var messages = [
+        ];
+        for (var index = 0; index < this.samples; index++) 
+        {
+            messages.push(pz.build());            
+        }
+
+        this.setState(() => 
             ({
-                messages:[pz.build(),pz.build(),pz.build(),pz.build(),pz.build(),pz.build(),pz.build(),pz.build()]
+                messages:messages
             })
         );
 
-         axios.get("https://raw.githubusercontent.com/zenril/parzen/master/README.md").then(res => {
-            this.setState(state => 
+        axios.get("https://raw.githubusercontent.com/zenril/parzen/master/README.md").then(res => 
+        {
+            this.setState(() => 
                 ({
                     body : res.data 
                 })
@@ -153,23 +164,32 @@ export default class Parzen extends React.Component {
     }
 
 
-    handleKeyUp(e) {
+    handleKeyUp(e) 
+    {
         let str = e.target.value;
         var json = JSON.parse(str);
         var pz = new ParZen(json);
 
-        this.setState(prevState => ({
+        var messages = [
+        ];
+        for (var index = 0; index < this.samples; index++) 
+        {
+            messages.push(pz.build());            
+        }
+
+        this.setState(() => ({
             list: str,
-            messages : [pz.build(),pz.build(),pz.build(),pz.build(),pz.build(),pz.build(),pz.build(),pz.build()]
+            messages : messages
         }));
     }
 
-    render() { 
+    render() 
+    { 
         return (
 
             <div className="container-play">
                 <h1>Modify the JSON</h1>
-                <h2>Just keep the "root" node</h2>
+                <h2>Just keep the &quot;root&quot; node</h2>
 
                 <div className='col-sm-8'>
                     <h3>Input</h3>
@@ -182,7 +202,8 @@ export default class Parzen extends React.Component {
                 
                 <div className='col-sm-4'>
                     <h3>Output</h3>
-                    {this.state.messages.map(function(object, i){
+                    {this.state.messages.map(function(object, i)
+                    {
                             
                         return <div key={i} className='parzen-line'> {object} </div>;
                         
@@ -190,7 +211,7 @@ export default class Parzen extends React.Component {
                 </div>
                 
                 <div className='col-sm-12'>
-                    <ReactMarkdown source={this.state.body} />
+                    <Markdown source={this.state.body} />
                 </div>
 
             </div>

@@ -1,22 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Gallery from 'react-grid-gallery';
 import {
     BrowserRouter as Router,
-    Route,
-    Link,
-    Switch
-} from 'react-router-dom'
+    Route
+} from 'react-router-dom';
 
 import SideBar from './components/SideBar';
 import Navigation from './components/Navigation';
 import Colors from './components/Colors';
-import {Home, Examples, Play, Parzen, Scale} from './containers'
+import { Home, Examples, Play, Parzen, Scale } from './containers';
 
 
-class App extends React.Component {
-    render() {
+class App extends React.Component 
+{
+    render() 
+    {
         const ColorStyle = new Colors().render();
         return (
             <div className='app-main'>

@@ -1,13 +1,12 @@
 import React from 'react';
 import ParZen from 'parzen';
 import {
-    BrowserRouter as Router,
-    Route,
     Link
 } from 'react-router-dom';
 
 
-const PlayThing = (props) => {
+const PlayThing = (props) => 
+{
 
     return (
         <div className="play-thing row">
@@ -18,7 +17,7 @@ const PlayThing = (props) => {
                             {props.part.name}
                         </Link>
                     </h1>
-                :
+                    :
                     <h1>{props.part.name}</h1>
                 )}
                 <div className='code-links'>
@@ -26,11 +25,11 @@ const PlayThing = (props) => {
                         <img src='/img/github.svg' />
                     </a>
                     {(props.part.npm? 
-                    <a className='npm-link code-link' href={props.part.npm}>
-                        <img src='/img/npm.svg' />
-                    </a>
-                    :
-                    <span></span>
+                        <a className='npm-link code-link' href={props.part.npm}>
+                            <img src='/img/npm.svg' />
+                        </a>
+                        :
+                        <span></span>
                     )}
                 </div>
             </div>
@@ -41,39 +40,58 @@ const PlayThing = (props) => {
 
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default class Play extends React.Component {
+export default class Play extends React.Component 
+{
 
-    constructor(props) {
+    constructor(props) 
+    {
         super(props);
         this.state = {
-            messages: []
+            messages: [
+            ]
         };
     }
 
-    componentDidMount() {
-        var self = this;
-        var json = {
-            "root": [
+    componentDidMount() 
+    {
+        var json = 
+
+        
+        {
+            "root": 
+            [
                 "you {{miss}} {{number}} percent of the {{things}} you {{end}}."
             ],
-            "miss": ["miss", "hit", "take", "throw"],
-            "number": ["20", "40", "60", "80", "100"],
-            "things": ["papers", "turnips", "shots", "chances"],
-            "end": ["never {{action}}", "won't {{action}}", "did {{action}}"],
-            "action": ["plant", "write", "taste", "touch", "open", "{{miss}}"]
+            "miss": [
+                "miss", "hit", "take", "throw"
+            ],
+            "number": [
+                "20", "40", "60", "80", "100"
+            ],
+            "things": [
+                "papers", "turnips", "shots", "chances"
+            ],
+            "end": [
+                "never {{action}}", "won't {{action}}", "did {{action}}"
+            ],
+            "action": [
+                "plant", "write", "taste", "touch", "open", "{{miss}}"
+            ]
         };
 
         var pz = new ParZen(json);
         var sentence = pz.build();
-
-        this.setState((state) => { state.messages.push(sentence); });
-
+        this.setState((state) => 
+        {
+            state.messages.push(sentence); 
+        });
     }
     
-    render() {
+    render() 
+    {
 
         var playthings = [
             {
@@ -112,34 +130,44 @@ export default class Play extends React.Component {
                 "page": null,
                 "decription": (
                     <div>
+                        
                         React twitch chat overlay. Visiting the following url <a href='http://twitchchat.aaron-m.co.nz/chat/loadingreadyrun'>http://twitchchat.aaron-m.co.nz/chat/loadingreadyrun</a> may provide text chat if this channel is online
                         <p>You can visit <a href='https://www.twitch.tv/loadingreadyrun'>https://www.twitch.tv/loadingreadyrun</a> to see if the chat is live</p>
                         <h2>Or</h2>
 
-<pre><code>
-{`//replace ':name' with twitch username
-http://twitchchat.aaron-m.co.nz/chat/:name
-`}</code></pre>
+                        {
+                            <pre><code>
+                                {`
+    //replace ':name' with twitch username
+    http://twitchchat.aaron-m.co.nz/chat/:name`
+                                }
+                            </code></pre>
+                        }
+
                     </div>
                 ),
                 "github": "https://github.com/zenril/twitchwidget",
                 "npm": null
             }
             ,
-             {
+            {
                 "name": "scale-ratio",
                 "page": "scale",
                 "decription": (
                     <div>
                         CSS to maintain elements aspect ratios across multiple device widths. The height will be set based on a % of its width.
 
-<pre><code>
-{`<div class='s-xs-50 s-sm-70 scale'>
-    <div>
-        <!-- your content goes here --> 
-    </div>
-</div>
-`}</code></pre> 
+                        {
+                            <pre><code>
+                                {`
+    div class='s-xs-50 s-sm-70 scale'>
+        <div>
+            <!-- your content goes here --> 
+        </div>
+    </div>`
+                                }
+                            </code></pre>
+                        }
                     </div> 
                 ),
                 "github": "https://github.com/zenril/scale-ratio",
@@ -151,7 +179,8 @@ http://twitchchat.aaron-m.co.nz/chat/:name
         return (
 
             <div className="container-play">
-                {playthings.map(function (object, i) {
+                {playthings.map(function (object, i) 
+                {
 
                     return <PlayThing part={object} key={i} />;
 

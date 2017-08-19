@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import ReactMarkdown from 'react-markdown';
+import Markdown from 'react-remarkable';
 
 export default class Scale extends React.Component 
 {
@@ -15,9 +15,9 @@ export default class Scale extends React.Component
 
     componentDidMount() 
     {
-         axios.get("https://raw.githubusercontent.com/zenril/scale-ratio/master/README.md").then(res => 
-         {           
-            this.setState(state => 
+        axios.get("https://raw.githubusercontent.com/zenril/scale-ratio/master/README.md").then(res => 
+        {
+            this.setState(() => 
                 ({
                     body : res.data 
                 })
@@ -43,17 +43,17 @@ export default class Scale extends React.Component
                         </div>
 
                         <div className='hidden-xs hidden-sm show-md hidden-lg'>
-                             <h2>Height is 30% of width </h2>
+                            <h2>Height is 30% of width </h2>
                         </div>
 
                         <div className='hidden-xs hidden-sm hidden-md show-lg'>
-                             <h2>Height is 20% of width</h2>
+                            <h2>Height is 20% of width</h2>
                         </div>
                     </div>
                 </div>
 
                 <div className='col-sm-12'>
-                   
+                    <Markdown source={this.state.body} />
                 </div>
             </div>
 

@@ -1,9 +1,11 @@
- var path = require('path');
- var webpack = require('webpack');
+var path = require('path');
+var webpack = require('webpack');
      
- module.exports = {
+module.exports = {
     entry: {
-        app : [ path.join(__dirname, 'src/App.js') ],
+        app : [
+            path.join(__dirname, 'src/App.js') 
+        ],
         vendor: [
             'history',
             'axios',
@@ -14,7 +16,7 @@
             'react-dom',
             'react-router',
             'react-bootstrap',
-            'react-markdown',
+            'react-remarkable',
             'react-router-dom',
             'vivus'
         ]
@@ -30,7 +32,9 @@
                 loader: 'babel-loader',
                 exclude: /(node_modules|bower_components)/,
                 query: {
-                    presets: ['es2015', 'es2016', 'react']
+                    presets: [
+                        'es2015', 'es2016', 'react'
+                    ]
                 }
             }
         ]
@@ -56,4 +60,4 @@
         colors: true
     },
     devtool: 'source-map'
- };
+};

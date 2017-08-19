@@ -1,9 +1,7 @@
 var React = require('react');
 import {
-    BrowserRouter as Router,
-    Route,
     Link
-} from 'react-router-dom'
+} from 'react-router-dom';
 
 class Navigation extends React.Component 
 {
@@ -11,7 +9,9 @@ class Navigation extends React.Component
     constructor(props) 
     {
         super(props);
-        this.state = { isToggleOn: false };
+        this.state = {
+            isToggleOn: false 
+        };
         this.handleClick = this.handleClick.bind(this);
         this.handleHoverOff = this.handleHoverOff.bind(this);
     }
@@ -27,7 +27,7 @@ class Navigation extends React.Component
     handleHoverOff(e) 
     {
         e.preventDefault();
-        this.setState(prevState => ({
+        this.setState(() => ({
             isToggleOn: false
         }));
     }

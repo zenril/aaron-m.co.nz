@@ -1,50 +1,56 @@
 import React from 'react';
-import Vivus from 'vivus';
 import Please from 'pleasejs';
 import col from 'color';
 
 let instance = null;
 
-export default class Colors {
+export default class Colors 
+{
 
-constructor(props) {
+    constructor() 
+    {
     
-    if(!instance){
-        instance = this;
+        if(!instance)
+        {
+            instance = this;
+        }
+
+        var c = Please.make_color(
+            { 
+                golden: false,
+                saturation: 1,
+                colors_returned: 20 
+            }, 
+            {
+                scheme_type: 'complementary'
+            }
+        );
+
+        this.colors = [
+        ];
+        c.forEach((element) => 
+        {
+            if(element.length == 7)
+            {
+                this.colors.push(element);
+            }
+        }, this);
+
+        this.color1 = this.colors[0];
+        this.color2 = this.colors[1];
+        this.color3 = this.colors[2];
+
+        this.light3 = col( this.color3 ).mix(col("white"), 0.8);
+
+        return instance;
     }
 
-    var c = Please.make_color(
-      { 
-        golden: false,
-        saturation: 1,
-        colors_returned: 20 
-      }, 
-      {
-        scheme_type: 'complementary'
-      }
-    );
-
-    this.colors = [];
-    c.forEach((element) => {
-      if(element.length == 7){
-        this.colors.push(element);
-      }
-    }, this);
-
-    this.color1 = this.colors[0];
-    this.color2 = this.colors[1];
-    this.color3 = this.colors[2];
-
-    this.light3 = col( this.color3 ).mix(col("white"), 0.8);
-
-    return instance;
-  }
-
-  render() {
-    var self = this;
-    return () => (
-        <style>
-            {`
+    render() 
+    {
+        var self = this;
+        return () => (
+            <style>
+                {`
             .color3,.navigation{
               background-color:`+ self.color3 + `;
             }
@@ -55,7 +61,7 @@ constructor(props) {
               border:1px solid ` + self.color3 + `;
             }
 
-            code{
+            code, table td{
               background:` + self.light3 + `;
             }
 
@@ -63,8 +69,10 @@ constructor(props) {
               border-left:5px solid ` + self.color3 + `;
             }
            `}
-        </style>
+            </style>
 
-    );
-  }
+        );
+    }
 }
+
+Colors.displayName = "Colors";

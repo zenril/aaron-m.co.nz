@@ -1,5 +1,5 @@
 import React from 'react';
-import Media from 'react-media'
+import Media from 'react-media';
 import classSet from 'classset';
 
 const Desc = (props) => 
@@ -28,7 +28,7 @@ const Desc = (props) =>
 
     );
     
-}
+};
 
 
 export default class Preview extends React.Component 
@@ -44,7 +44,9 @@ export default class Preview extends React.Component
 
             <div className={classes}>
                 <div className='col-sm-12 gallery'>
-                    <Media query={{ minWidth: 830 }}>
+                    <Media query={{
+                        minWidth: 830 
+                    }}>
                         {matches => matches ? (
                             <img src={this.props.obj.src[0] + "/splash.jpg"} />
                         ) : (

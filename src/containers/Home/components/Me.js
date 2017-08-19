@@ -2,9 +2,11 @@ import React from 'react';
 import classSet from 'classset';
 
 
-export default class Me extends React.Component{
+export default class Me extends React.Component
+{
     
-    render () {
+    render () 
+    {
 
         var classes = classSet({
             'card': true,
@@ -43,7 +45,7 @@ export default class Me extends React.Component{
                             <p><strong>Web Developer</strong></p>
                             <p>Developing and maintaining the front end and back end functionality of
                             websites.</p>
-                            <p>Developing and maintaining API's.</p>
+                            <p>Developing and maintaining API&apos;s.</p>
                             <p>Engaging with clients during design, development and support of projects.</p>
                             <p>Writing cross-browser, responsive, compliant HTML5, CSS3 & JavaScript</p>
                             <p>Using tools that include Gulp, Webpack, Sass, Composer.</p>
