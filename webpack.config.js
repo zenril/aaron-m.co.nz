@@ -2,7 +2,23 @@
  var webpack = require('webpack');
      
  module.exports = {
-    entry: './src/App.js',
+    entry: {
+        app : [ path.join(__dirname, 'src/App.js') ],
+        vendor: [
+            'history',
+            'axios',
+            'classset',
+            'color',
+            'pleasejs',
+            'react',
+            'react-dom',
+            'react-router',
+            'react-bootstrap',
+            'react-markdown',
+            'react-router-dom',
+            'vivus'
+        ]
+    },
     output: {
         path: path.resolve(__dirname, 'public/js'),
         filename: 'app.bundle.js'
@@ -20,16 +36,21 @@
         ]
     },
     plugins: [
-        // new webpack.DefinePlugin({
-        //     'process.env': {
-        //         NODE_ENV: JSON.stringify('production')
-        //     }
-        // }),
-        // new webpack.optimize.UglifyJsPlugin({
-        //     compress: {
-        //         warnings: false
-        //     }
-        // })
+        new webpack.optimize.CommonsChunkPlugin({ 
+            name: 'vendor', 
+            path: path.resolve(__dirname, 'public/js'),
+            filename: 'vendor.bundle.js' 
+        }),
+        new webpack.DefinePlugin({
+            'process.env': {
+                NODE_ENV: JSON.stringify('production')
+            }
+        }),
+        new webpack.optimize.UglifyJsPlugin({
+            compress: {
+                warnings: false
+            }
+        })
     ],
     stats: {
         colors: true
