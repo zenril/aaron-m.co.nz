@@ -51,24 +51,24 @@ export default class Colors
         return () => (
             <style>
                 {`
-            .color3,.navigation{
-              background-color:`+ self.color3 + `;
-            }
-            .color3t, h2, a, a:active, a:hover , h1{
-              color:`+ self.color3 + `;
-            }
-            .border-style-color3{
-              border:1px solid ` + self.color3 + `;
-            }
+              .color3,.navigation{
+                background-color:`+ self.color3 + `;
+              }
+              .color3t, h2, a, a:active, a:hover , h1{
+                color:`+ self.color3 + `;
+              }
+              .border-style-color3{
+                border:1px solid ` + self.color3 + `;
+              }
 
-            code, table td{
-              background:` + self.light3 + `;
-            }
+              code, table td{
+                background:` + self.light3 + `;
+              }
 
-            pre code {
-              border-left:5px solid ` + self.color3 + `;
-            }
-           `}
+              pre code {
+                border-left:5px solid ` + self.color3 + `;
+              }
+              `}
             </style>
 
         );

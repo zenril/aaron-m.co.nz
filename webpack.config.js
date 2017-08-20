@@ -11,14 +11,13 @@ module.exports = {
             'axios',
             'classset',
             'color',
-            'pleasejs',
             'react',
             'react-dom',
+            'react-media',
             'react-router',
             'react-bootstrap',
             'react-remarkable',
             'react-router-dom',
-            'vivus'
         ]
     },
     output: {

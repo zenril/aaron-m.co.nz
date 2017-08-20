@@ -45,7 +45,6 @@ const PlayThing = (props) =>
 
 export default class Play extends React.Component 
 {
-
     constructor(props) 
     {
         super(props);
@@ -58,8 +57,6 @@ export default class Play extends React.Component
     componentDidMount() 
     {
         var json = 
-
-        
         {
             "root": 
             [
